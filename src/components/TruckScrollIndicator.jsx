@@ -25,20 +25,17 @@ const TruckScrollIndicator = () => {
   };
 
   // More aggressive throttling for better performance
-  const throttledScroll = useCallback(
-    (targetPosition) => {
-      const now = Date.now();
-      if (now - lastScrollTimeRef.current > 16) {
-        // 60fps
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "auto",
-        });
-        lastScrollTimeRef.current = now;
-      }
-    },
-    []
-  );
+  const throttledScroll = useCallback((targetPosition) => {
+    const now = Date.now();
+    if (now - lastScrollTimeRef.current > 16) {
+      // 60fps
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "auto",
+      });
+      lastScrollTimeRef.current = now;
+    }
+  }, []);
 
   const handleDrag = useCallback(
     (event, info) => {
@@ -121,7 +118,9 @@ const TruckScrollIndicator = () => {
               <div
                 key={i}
                 className="w-8 h-full bg-white"
-                style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)" }}
+                style={{
+                  clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
+                }}
               />
             ))}
           </div>
@@ -130,7 +129,7 @@ const TruckScrollIndicator = () => {
 
       {/* Truck - Perfect mouse following */}
       <motion.div
-        className="absolute bottom-2 w-16 h-12 flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing"
+        className="absolute bottom-0 w-24 h-24 flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing"
         style={{
           left: `${currentProgress}%`,
           transform: "translateX(-50%)",
@@ -191,21 +190,6 @@ const TruckScrollIndicator = () => {
           }}
           transition={{ duration: 0.6, repeat: Infinity, ease: "easeOut" }}
         />
-      )}
-
-      {/* Progress tooltip */}
-      {isDragging && (
-        <motion.div
-          className="absolute bottom-20 bg-theme-dark text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg"
-          style={{
-            left: `${mouseProgress}%`,
-            transform: "translateX(-50%)",
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          {Math.round(mouseProgress)}%
-        </motion.div>
       )}
     </div>
   );

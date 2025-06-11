@@ -51,15 +51,15 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
-  // Banner scrolling animation
+  // Banner scrolling animation - adjusted for 10x repetition
   useEffect(() => {
     bannerControls.start({
-      x: [0, -2000],
+      x: [0, -2000], // Adjust distance based on content width
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 30,
+          duration: 40, // Slightly longer duration for smoother scroll
           ease: "linear",
         },
       },
@@ -94,37 +94,31 @@ const Navbar = () => {
             className="flex items-center space-x-8 mx-4 text-sm font-medium"
             animate={bannerControls}
           >
-            <div className="flex items-center gap-1.5">
-              <Briefcase size={14} className="stroke-[2.5]" />
-              <span>Professional Driver Training Programs</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <Users size={14} className="stroke-[2.5]" />
-              <span>International Certification Available</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <BarChart2 size={14} className="stroke-[2.5]" />
-              <span>Global Employment Opportunities</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <CheckCircle size={14} className="stroke-[2.5]" />
-              <span>100% Job Placement Assistance</span>
-            </div>
-
-            {/* Second set for continuous scrolling */}
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <Briefcase size={14} className="stroke-[2.5]" />
-              <span>Professional Driver Training Programs</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <Users size={14} className="stroke-[2.5]" />
-              <span>International Certification Available</span>
-            </div>
+            {/* Repeat the banner content 10 times for infinite effect */}
+            {Array.from({ length: 10 }).map((_, index) => (
+              <React.Fragment key={index}>
+                <div className="flex items-center gap-1.5">
+                  <Briefcase size={14} className="stroke-[2.5]" />
+                  <span>Professional Driver Training Programs</span>
+                </div>
+                <CircleDot size={6} className="opacity-60" />
+                <div className="flex items-center gap-1.5">
+                  <Users size={14} className="stroke-[2.5]" />
+                  <span>International Certification Available</span>
+                </div>
+                <CircleDot size={6} className="opacity-60" />
+                <div className="flex items-center gap-1.5">
+                  <BarChart2 size={14} className="stroke-[2.5]" />
+                  <span>Global Employment Opportunities</span>
+                </div>
+                <CircleDot size={6} className="opacity-60" />
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle size={14} className="stroke-[2.5]" />
+                  <span>100% Job Placement Assistance</span>
+                </div>
+                <CircleDot size={6} className="opacity-60" />
+              </React.Fragment>
+            ))}
           </motion.div>
         </div>
       </div>
@@ -182,23 +176,14 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("learn")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <NavLink
-                to="/learn"
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-medium uppercase text-theme-primary"
-                    : "font-medium uppercase"
-                }
-              >
+              <a href="#" className="font-medium uppercase">
                 Learn
-              </NavLink>
+              </a>
               <span
                 style={{
                   ...navLinkAfterStyle,
                   transform:
-                    location.pathname === "/learn" || hoveredItem === "learn"
-                      ? "scaleX(1)"
-                      : "scaleX(0)",
+                    hoveredItem === "learn" ? "scaleX(1)" : "scaleX(0)",
                 }}
               ></span>
             </span>
@@ -210,24 +195,14 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("program")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <NavLink
-                to="/program"
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-medium uppercase text-theme-primary"
-                    : "font-medium uppercase"
-                }
-              >
+              <a href="#" className="font-medium uppercase">
                 Program
-              </NavLink>
+              </a>
               <span
                 style={{
                   ...navLinkAfterStyle,
                   transform:
-                    location.pathname === "/program" ||
-                    hoveredItem === "program"
-                      ? "scaleX(1)"
-                      : "scaleX(0)",
+                    hoveredItem === "program" ? "scaleX(1)" : "scaleX(0)",
                 }}
               ></span>
             </span>
@@ -239,23 +214,13 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("book")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <NavLink
-                to="/book"
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-medium uppercase text-theme-primary"
-                    : "font-medium uppercase"
-                }
-              >
+              <a href="#" className="font-medium uppercase">
                 Book
-              </NavLink>
+              </a>
               <span
                 style={{
                   ...navLinkAfterStyle,
-                  transform:
-                    location.pathname === "/book" || hoveredItem === "book"
-                      ? "scaleX(1)"
-                      : "scaleX(0)",
+                  transform: hoveredItem === "book" ? "scaleX(1)" : "scaleX(0)",
                 }}
               ></span>
             </span>
@@ -267,24 +232,14 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("contact")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-medium uppercase text-theme-primary"
-                    : "font-medium uppercase"
-                }
-              >
+              <a href="#" className="font-medium uppercase">
                 Contact
-              </NavLink>
+              </a>
               <span
                 style={{
                   ...navLinkAfterStyle,
                   transform:
-                    location.pathname === "/contact" ||
-                    hoveredItem === "contact"
-                      ? "scaleX(1)"
-                      : "scaleX(0)",
+                    hoveredItem === "contact" ? "scaleX(1)" : "scaleX(0)",
                 }}
               ></span>
             </span>
@@ -292,7 +247,7 @@ const Navbar = () => {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="/book" color="gradient">
+            <Button to="#" color="gradient">
               BOOK NOW
             </Button>
           </div>

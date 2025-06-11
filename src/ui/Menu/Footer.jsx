@@ -30,22 +30,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <span className="text-gray-600 hover:text-theme-primary">
-                  <Link to="/learn">Learn & Training</Link>
+                  <a href="#">Learn & Training</a>
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-theme-primary">
-                  <Link to="/program">Program Overview</Link>
+                  <a href="#">Program Overview</a>
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-theme-primary">
-                  <Link to="/book">Book Training</Link>
+                  <a href="#">Book Training</a>
                 </span>
               </li>
               <li>
                 <span className="text-gray-600 hover:text-theme-primary">
-                  <Link to="/contact">Contact Us</Link>
+                  <a href="#">Contact Us</a>
                 </span>
               </li>
             </ul>

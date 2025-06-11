@@ -79,45 +79,45 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
           Home
         </Link>
 
-        <Link
-          to="/learn"
+        <a
+          href="#"
           className="block py-2 text-gray-700 hover:text-theme-primary font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Learn
-        </Link>
+        </a>
 
-        <Link
-          to="/program"
+        <a
+          href="#"
           className="block py-2 text-gray-700 hover:text-theme-primary font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Program
-        </Link>
+        </a>
 
-        <Link
-          to="/book"
+        <a
+          href="#"
           className="block py-2 text-gray-700 hover:text-theme-primary font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Book
-        </Link>
+        </a>
 
-        <Link
-          to="/contact"
+        <a
+          href="#"
           className="block py-2 text-gray-700 hover:text-theme-primary font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Contact
-        </Link>
+        </a>
 
-        <Link
-          to="/book"
+        <a
+          href="#"
           className="block bg-theme-primary hover:bg-theme-warning text-white px-6 py-3 rounded-md transition-colors text-center mt-6"
           onClick={() => setIsOpen(false)}
         >
           Book Now
-        </Link>
+        </a>
       </div>
     </motion.div>
   );

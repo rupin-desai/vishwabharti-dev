@@ -53,8 +53,6 @@ const HomeContact = () => {
         backfaceVisibility: "hidden",
       }}
     >
-      {/* Simple background gradient */}
-
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Left-aligned title */}
@@ -69,7 +67,7 @@ const HomeContact = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3 sm:mb-4">
               Get In Touch
             </h2>
-            <div className="w-32 sm:w-60 h-1 ml-1 sm:ml-2 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mb-4 sm:mb-6"></div>
+            <div className="w-32 sm:w-60 h-1 ml-1 sm:ml-2 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success mb-4 sm:mb-6"></div>
             <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
               Have a question or ready to explore how we can help? Reach out to
               our team.

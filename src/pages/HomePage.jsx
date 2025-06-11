@@ -12,7 +12,6 @@ const HomePage = () => {
   return (
     <>
       <Homehero />
-      {/* <HomeBanner /> */}
       <HomeStats />
       <HomeBanner />
       <HomeColabs />

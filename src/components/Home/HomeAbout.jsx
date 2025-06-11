@@ -54,28 +54,28 @@ const HomeAbout = () => {
   // Core values data - simplified descriptions
   const values = [
     {
-      title: "Excellence",
-      description: "Delivering the highest quality in all we do",
+      title: "Safety First",
+      description: "Comprehensive safety training for all road conditions",
       icon: <Target size={18} className="sm:w-[22px] sm:h-[22px]" />,
-      color: "from-indigo-600 to-sky-600",
+      color: "from-theme-primary to-theme-accent",
     },
     {
-      title: "Collaboration",
-      description: "Working as true partners with our clients",
+      title: "Global Standards",
+      description: "Training that meets international driving standards",
       icon: <Users size={18} className="sm:w-[22px] sm:h-[22px]" />,
-      color: "from-sky-600 to-teal-600",
+      color: "from-theme-accent to-theme-success",
     },
     {
-      title: "Integrity",
-      description: "Upholding the highest ethical standards",
+      title: "Professional Excellence",
+      description: "Developing skilled, professional drivers",
       icon: <Award size={18} className="sm:w-[22px] sm:h-[22px]" />,
-      color: "from-teal-600 to-indigo-600",
+      color: "from-theme-success to-theme-green-light",
     },
     {
-      title: "Innovation",
-      description: "Creating solutions for complex challenges",
+      title: "Career Growth",
+      description: "Supporting long-term career development",
       icon: <Briefcase size={18} className="sm:w-[22px] sm:h-[22px]" />,
-      color: "from-indigo-600 to-teal-600",
+      color: "from-theme-primary to-theme-success",
     },
   ];
 
@@ -90,7 +90,7 @@ const HomeAbout = () => {
       }}
     >
       {/* Background elements */}
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-teal-50 to-transparent -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-theme-light to-transparent -z-10"></div>
 
       <div className="container mx-auto">
         {/* Section header */}
@@ -103,9 +103,9 @@ const HomeAbout = () => {
           style={{ willChange: "transform, opacity" }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
-            About GSK Consultants
+            About Vishwabharti
           </h2>
-          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-4 sm:mb-6"></div>
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success mx-auto mb-4 sm:mb-6"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
@@ -121,14 +121,15 @@ const HomeAbout = () => {
               style={{ willChange: "transform, opacity" }}
             >
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                GSK Consultants is a premier consulting firm helping businesses
-                navigate challenges and seize opportunities. Our expert team
-                brings decades of experience to every project.
+                Vishwabharti is a leading driver training institute specializing
+                in preparing Indian drivers for global opportunities. Our
+                comprehensive programs combine technical skills with
+                international standards.
               </p>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                Founded in 2013, we've grown to serve clients across India and
-                internationally with innovative solutions that deliver
-                measurable results.
+                With over 15 years of experience, we've successfully trained and
+                placed hundreds of drivers in countries across Europe,
+                Australia, and North America.
               </p>
             </motion.div>
 
@@ -188,26 +189,26 @@ const HomeAbout = () => {
           >
             <div className="rounded-lg overflow-hidden shadow-lg relative">
               <img
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
-                alt="Business team collaborating"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+                alt="Professional driver training session"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
               {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-theme-primary/20 to-transparent"></div>
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-3 sm:-bottom-4 -right-3 sm:-right-4 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"></div>
-            <div className="absolute -top-3 sm:-top-4 -left-3 sm:-left-4 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"></div>
+            <div className="absolute -bottom-3 sm:-bottom-4 -right-3 sm:-right-4 w-full h-full border-2 border-theme-primary/30 rounded-lg -z-10"></div>
+            <div className="absolute -top-3 sm:-top-4 -left-3 sm:-left-4 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-r from-theme-light to-theme-light rounded-lg -z-10"></div>
 
             {/* Quote overlay - simplified */}
             <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg shadow-md">
               <p className="text-gray-700 text-sm sm:text-base italic">
-                "Empowering businesses with strategic insights and operational
-                excellence to thrive in today's competitive landscape."
+                "Empowering Indian drivers with the skills and certifications
+                needed to succeed in the global transportation industry."
               </p>
-              <p className="text-right text-indigo-600 font-medium text-sm sm:text-base mt-1 sm:mt-2">
-                — Founder & CEO
+              <p className="text-right text-theme-primary font-medium text-sm sm:text-base mt-1 sm:mt-2">
+                — Training Director
               </p>
             </div>
           </motion.div>

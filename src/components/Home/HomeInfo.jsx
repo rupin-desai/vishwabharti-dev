@@ -103,7 +103,7 @@ const HomeInfo = () => {
 
   return (
     <section
-      className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-r from-indigo-50 via-white to-teal-50"
+      className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-r from-theme-light via-white to-theme-light"
       ref={ref}
       style={{
         perspective: 1000,
@@ -112,7 +112,7 @@ const HomeInfo = () => {
     >
       {/* Decorative elements */}
       <motion.div
-        className="absolute top-1/4 left-4 sm:left-10 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-teal-100/40 to-indigo-100/40 rounded-full pointer-events-none"
+        className="absolute top-1/4 left-4 sm:left-10 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-theme-success/40 to-theme-primary/40 rounded-full pointer-events-none"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -132,7 +132,7 @@ const HomeInfo = () => {
             variants={titleVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            Ready to Transform Your Business?
+            Ready to Start Your Driving Career?
           </motion.h2>
 
           {/* Content */}
@@ -141,9 +141,9 @@ const HomeInfo = () => {
             variants={contentVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            Let's discuss how our strategic consulting and project management
-            expertise can help you achieve measurable results and sustainable
-            growth.
+            Join thousands of successful graduates who have transformed their
+            lives through our comprehensive driver training program. Take the
+            first step towards international employment opportunities today.
           </motion.p>
 
           <motion.div
@@ -156,7 +156,7 @@ const HomeInfo = () => {
               className="px-6 py-2.5 sm:px-8 sm:py-3 text-base sm:text-lg"
               onClick={scrollToContact}
             >
-              Get in Touch Today
+              Apply Now
             </Button>
           </motion.div>
         </motion.div>

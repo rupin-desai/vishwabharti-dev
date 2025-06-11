@@ -68,16 +68,16 @@ const HomeBanner = () => {
   // Features data
   const features = [
     {
-      text: "Expert team with industry-specific knowledge",
-      color: "text-indigo-600",
+      text: "Certified instructors with international driving experience",
+      color: "text-theme-primary",
     },
     {
-      text: "Proven methodologies that deliver measurable results",
-      color: "text-sky-600",
+      text: "Comprehensive training covering all vehicle types and terrains",
+      color: "text-theme-accent",
     },
     {
-      text: "Customized solutions tailored to your unique needs",
-      color: "text-teal-600",
+      text: "100% job placement assistance with global employment opportunities",
+      color: "text-theme-success",
     },
   ];
 
@@ -203,11 +203,11 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-r from-indigo-600/10 via-sky-600/10 to-teal-600/10 text-indigo-700 font-medium rounded-full text-xs sm:text-sm inline-block">
-                  Premier Consulting Services
+                <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-r from-theme-primary/10 via-theme-accent/10 to-theme-success/10 text-theme-primary font-medium rounded-full text-xs sm:text-sm inline-block">
+                  Professional Driver Training
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                  Transform Your Business with Strategic Expertise
+                  Master Professional Driving Skills for Global Opportunities
                 </h2>
               </motion.div>
 
@@ -222,9 +222,9 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                Our tailored consulting solutions help businesses achieve
-                sustainable growth, optimize operations, and navigate complex
-                challenges with confidence.
+                Our comprehensive driver apprenticeship program prepares you for
+                international employment opportunities with hands-on training,
+                safety certifications, and language support.
               </motion.p>
 
               {/* Feature List */}
@@ -280,8 +280,7 @@ const HomeBanner = () => {
                   className="flex items-center justify-center"
                   onClick={scrollToContact}
                 >
-                  Schedule a Consultation{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  Apply for Training <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button
                   variant="outline"
@@ -312,7 +311,7 @@ const HomeBanner = () => {
                       src={`https://randomuser.me/api/portraits/men/${
                         20 + i
                       }.jpg`}
-                      alt="Client"
+                      alt="Graduate"
                       className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
                     />
                   ))}
@@ -327,7 +326,7 @@ const HomeBanner = () => {
                     ))}
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Trusted by 200+ businesses worldwide
+                    Trusted by 500+ successful graduates worldwide
                   </p>
                 </div>
               </motion.div>
@@ -347,19 +346,19 @@ const HomeBanner = () => {
             >
               <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80"
-                  alt="Business Strategy Session"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  alt="Professional Driver Training"
                   className="w-full h-full object-cover rounded-lg"
                   style={{ willChange: "transform" }}
                 />
 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-theme-primary/20 to-transparent"></div>
               </div>
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -bottom-3 sm:-bottom-5 -right-3 sm:-right-5 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"
+                className="absolute -bottom-3 sm:-bottom-5 -right-3 sm:-right-5 w-full h-full border-2 border-theme-primary/30 rounded-lg -z-10"
                 variants={decorVariants}
                 initial="hidden"
                 animate={isImageInView ? "visible" : "hidden"}
@@ -370,7 +369,7 @@ const HomeBanner = () => {
               ></motion.div>
 
               <motion.div
-                className="absolute -top-3 sm:-top-5 -left-3 sm:-left-5 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"
+                className="absolute -top-3 sm:-top-5 -left-3 sm:-left-5 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-r from-theme-light to-theme-light rounded-lg -z-10"
                 variants={decorVariants}
                 initial="hidden"
                 animate={isImageInView ? "visible" : "hidden"}
@@ -391,11 +390,11 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                <div className="text-indigo-600 font-bold text-2xl sm:text-3xl">
+                <div className="text-theme-primary font-bold text-2xl sm:text-3xl">
                   95%
                 </div>
                 <div className="text-gray-700 text-xs sm:text-sm">
-                  Client satisfaction rate on projects delivered on time
+                  Job placement rate within 6 months of graduation
                 </div>
               </motion.div>
             </motion.div>
@@ -405,7 +404,7 @@ const HomeBanner = () => {
 
       <motion.div
         ref={bgBottomRef}
-        className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-teal-50 to-transparent -z-10"
+        className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-theme-light to-transparent -z-10"
         variants={backgroundVariants}
         initial="hidden"
         animate={isBgBottomInView ? "visible" : "hidden"}

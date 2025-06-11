@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, Phone, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  User,
+  Phone,
+  Mail,
+  MapPin,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
 
 const BookPage = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +21,7 @@ const BookPage = () => {
     preferredDate: "",
     preferredTime: "",
     experience: "",
-    message: ""
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,28 +30,40 @@ const BookPage = () => {
   const programTypes = [
     { value: "basic", label: "Basic Driver Training (4 weeks)" },
     { value: "advanced", label: "Advanced Driver Training (8 weeks)" },
-    { value: "professional", label: "Professional Driver Certification (12 weeks)" },
-    { value: "international", label: "International Driver Certification (16 weeks)" }
+    {
+      value: "professional",
+      label: "Professional Driver Certification (12 weeks)",
+    },
+    {
+      value: "international",
+      label: "International Driver Certification (16 weeks)",
+    },
   ];
 
   const timeSlots = [
     { value: "morning", label: "Morning (9:00 AM - 12:00 PM)" },
     { value: "afternoon", label: "Afternoon (1:00 PM - 4:00 PM)" },
-    { value: "evening", label: "Evening (5:00 PM - 8:00 PM)" }
+    { value: "evening", label: "Evening (5:00 PM - 8:00 PM)" },
   ];
 
   const experienceLevels = [
     { value: "beginner", label: "Complete Beginner" },
     { value: "basic", label: "Basic (Can drive but need improvement)" },
-    { value: "intermediate", label: "Intermediate (Confident but want certification)" },
-    { value: "experienced", label: "Experienced (Want professional certification)" }
+    {
+      value: "intermediate",
+      label: "Intermediate (Confident but want certification)",
+    },
+    {
+      value: "experienced",
+      label: "Experienced (Want professional certification)",
+    },
   ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -53,8 +74,8 @@ const BookPage = () => {
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setSubmitStatus("success");
       // Reset form
       setFormData({
         firstName: "",
@@ -65,10 +86,10 @@ const BookPage = () => {
         preferredDate: "",
         preferredTime: "",
         experience: "",
-        message: ""
+        message: "",
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -89,7 +110,8 @@ const BookPage = () => {
           </h1>
           <div className="w-24 h-1 bg-theme-primary mx-auto mb-6"></div>
           <p className="text-theme-neutral max-w-2xl mx-auto text-lg">
-            Start your journey towards professional driving certification. Choose your program and schedule your training today.
+            Start your journey towards professional driving certification.
+            Choose your program and schedule your training today.
           </p>
         </motion.div>
 
@@ -107,7 +129,7 @@ const BookPage = () => {
                 Book Your Program
               </h2>
 
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <motion.div
                   className="mb-6 p-4 bg-theme-success bg-opacity-10 border border-theme-success rounded-lg flex items-center"
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -115,12 +137,13 @@ const BookPage = () => {
                 >
                   <CheckCircle className="text-theme-success mr-3" size={20} />
                   <span className="text-theme-success font-medium">
-                    Booking submitted successfully! We'll contact you within 24 hours.
+                    Booking submitted successfully! We'll contact you within 24
+                    hours.
                   </span>
                 </motion.div>
               )}
 
-              {submitStatus === 'error' && (
+              {submitStatus === "error" && (
                 <motion.div
                   className="mb-6 p-4 bg-theme-warning bg-opacity-10 border border-theme-warning rounded-lg flex items-center"
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -221,7 +244,7 @@ const BookPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
                       >
                         <option value="">Select a program</option>
-                        {programTypes.map(program => (
+                        {programTypes.map((program) => (
                           <option key={program.value} value={program.value}>
                             {program.label}
                           </option>
@@ -240,7 +263,7 @@ const BookPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
                       >
                         <option value="">Select your level</option>
-                        {experienceLevels.map(level => (
+                        {experienceLevels.map((level) => (
                           <option key={level.value} value={level.value}>
                             {level.label}
                           </option>
@@ -266,7 +289,7 @@ const BookPage = () => {
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         required
-                        min={new Date().toISOString().split('T')[0]}
+                        min={new Date().toISOString().split("T")[0]}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
                       />
                     </div>
@@ -282,7 +305,7 @@ const BookPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
                       >
                         <option value="">Select time slot</option>
-                        {timeSlots.map(slot => (
+                        {timeSlots.map((slot) => (
                           <option key={slot.value} value={slot.value}>
                             {slot.label}
                           </option>
@@ -333,26 +356,37 @@ const BookPage = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="text-theme-primary mr-3 flex-shrink-0" size={20} />
+                  <Phone
+                    className="text-theme-primary mr-3 flex-shrink-0"
+                    size={20}
+                  />
                   <div>
                     <p className="font-medium text-theme-dark">Phone</p>
                     <p className="text-theme-neutral">(+91) 93226 06890</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="text-theme-accent mr-3 flex-shrink-0" size={20} />
+                  <Mail
+                    className="text-theme-accent mr-3 flex-shrink-0"
+                    size={20}
+                  />
                   <div>
                     <p className="font-medium text-theme-dark">Email</p>
                     <p className="text-theme-neutral">info@vishwabharti.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="text-theme-success mr-3 flex-shrink-0 mt-1" size={20} />
+                  <MapPin
+                    className="text-theme-success mr-3 flex-shrink-0 mt-1"
+                    size={20}
+                  />
                   <div>
                     <p className="font-medium text-theme-dark">Address</p>
                     <p className="text-theme-neutral">
-                      Sector 12, Kharghar<br />
-                      Navi Mumbai, Maharashtra<br />
+                      Sector 12, Kharghar
+                      <br />
+                      Navi Mumbai, Maharashtra
+                      <br />
                       India - 410210
                     </p>
                   </div>
@@ -367,23 +401,46 @@ const BookPage = () => {
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <CheckCircle className="text-theme-success mr-3 flex-shrink-0 mt-0.5" size={16} />
-                  <span className="text-theme-neutral">100% Job Placement Assistance</span>
+                  <CheckCircle
+                    className="text-theme-success mr-3 flex-shrink-0 mt-0.5"
+                    size={16}
+                  />
+                  <span className="text-theme-neutral">
+                    100% Job Placement Assistance
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-theme-success mr-3 flex-shrink-0 mt-0.5" size={16} />
-                  <span className="text-theme-neutral">International Certification</span>
+                  <CheckCircle
+                    className="text-theme-success mr-3 flex-shrink-0 mt-0.5"
+                    size={16}
+                  />
+                  <span className="text-theme-neutral">
+                    International Certification
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-theme-success mr-3 flex-shrink-0 mt-0.5" size={16} />
-                  <span className="text-theme-neutral">Experienced Instructors</span>
+                  <CheckCircle
+                    className="text-theme-success mr-3 flex-shrink-0 mt-0.5"
+                    size={16}
+                  />
+                  <span className="text-theme-neutral">
+                    Experienced Instructors
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-theme-success mr-3 flex-shrink-0 mt-0.5" size={16} />
-                  <span className="text-theme-neutral">Modern Training Vehicles</span>
+                  <CheckCircle
+                    className="text-theme-success mr-3 flex-shrink-0 mt-0.5"
+                    size={16}
+                  />
+                  <span className="text-theme-neutral">
+                    Modern Training Vehicles
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-theme-success mr-3 flex-shrink-0 mt-0.5" size={16} />
+                  <CheckCircle
+                    className="text-theme-success mr-3 flex-shrink-0 mt-0.5"
+                    size={16}
+                  />
                   <span className="text-theme-neutral">Flexible Schedules</span>
                 </li>
               </ul>
@@ -396,16 +453,26 @@ const BookPage = () => {
               </h3>
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-theme-primary">500+</div>
-                  <div className="text-sm text-theme-neutral">Students Trained</div>
+                  <div className="text-2xl font-bold text-theme-primary">
+                    500+
+                  </div>
+                  <div className="text-sm text-theme-neutral">
+                    Students Trained
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-theme-primary">95%</div>
+                  <div className="text-2xl font-bold text-theme-primary">
+                    95%
+                  </div>
                   <div className="text-sm text-theme-neutral">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-theme-primary">10+</div>
-                  <div className="text-sm text-theme-neutral">Years Experience</div>
+                  <div className="text-2xl font-bold text-theme-primary">
+                    10+
+                  </div>
+                  <div className="text-sm text-theme-neutral">
+                    Years Experience
+                  </div>
                 </div>
               </div>
             </div>

@@ -16,30 +16,16 @@ const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
       className="bg-white p-4 sm:p-6 rounded-lg shadow-md flex flex-col items-center text-center relative overflow-hidden group h-full transition-all duration-300 hover:shadow-xl"
     >
       {/* Curtain overlay - hidden initially, slides down on hover */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/90 via-sky-600/90 to-teal-600/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-theme-primary/90 via-theme-accent/90 to-theme-success/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content container - stays above the curtain overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1">
-        {/* Icon container with consistent gradient that stays on hover */}
+        {/* Icon container with theme colors */}
         <div
-          className={`w-14 h-14 sm:w-16 sm:h-16 mb-4 flex items-center justify-center rounded-full transition-all duration-300 bg-gradient-to-r ${
-            iconColor === "indigo"
-              ? "from-indigo-100 to-indigo-200"
-              : iconColor === "teal"
-              ? "from-teal-100 to-teal-200"
-              : "from-sky-100 to-sky-200"
-          } group-hover:${
-            iconColor === "indigo"
-              ? "from-indigo-200 to-indigo-300"
-              : iconColor === "teal"
-              ? "from-teal-200 to-teal-300"
-              : "from-sky-200 to-sky-300"
-          }`}
+          className={`w-14 h-14 sm:w-16 sm:h-16 mb-4 flex items-center justify-center rounded-full transition-all duration-300 bg-theme-light group-hover:bg-white/20`}
         >
-          {/* Icon that keeps its color on hover */}
-          <span
-            className={`text-${iconColor}-600 group-hover:text-${iconColor}-700`}
-          >
+          {/* Icon with theme colors */}
+          <span className={`text-theme-primary group-hover:text-white`}>
             {icon}
           </span>
         </div>
@@ -49,7 +35,7 @@ const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
         </h3>
 
         {/* Decorative line */}
-        <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 group-hover:bg-white transition-colors duration-300 mb-3 sm:mb-4"></div>
+        <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success group-hover:bg-white transition-colors duration-300 mb-3 sm:mb-4"></div>
 
         <p className="text-sm sm:text-base text-gray-600 group-hover:text-white/90 transition-colors duration-300">
           {description}
@@ -130,49 +116,49 @@ const HomeWhyUs = () => {
     },
   };
 
-  // Features with reduced text content and added icon colors
+  // Features with driver training specific content
   const features = [
     {
       icon: <TrophyIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "Experienced Professionals",
+      title: "Expert Instructors",
       description:
-        "Industry experts with decades of experience across diverse sectors.",
-      iconColor: "indigo",
+        "Certified trainers with international driving experience and safety expertise.",
+      iconColor: "theme-primary",
     },
     {
       icon: <UsersIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "Client-Focused Approach",
+      title: "Personalized Training",
       description:
-        "Solutions tailored to your specific business goals and culture.",
-      iconColor: "teal",
+        "Individual attention and customized learning paths for every student.",
+      iconColor: "theme-accent",
     },
     {
       icon: <ScaleIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "Scalable Solutions",
+      title: "International Standards",
       description:
-        "Services that grow with your business and adapt to market changes.",
-      iconColor: "sky",
+        "Training programs that meet global driving and safety requirements.",
+      iconColor: "theme-success",
     },
     {
       icon: <BarChartIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "Proven Track Record",
+      title: "Proven Success Rate",
       description:
-        "Hundreds of successful projects with measurable client results.",
-      iconColor: "indigo",
+        "95% job placement rate with comprehensive career support services.",
+      iconColor: "theme-primary",
     },
     {
       icon: <PieChartIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "Data-Driven Strategy",
+      title: "Modern Equipment",
       description:
-        "Recommendations backed by thorough analysis and industry insights.",
-      iconColor: "teal",
+        "State-of-the-art vehicles and simulation technology for practical training.",
+      iconColor: "theme-accent",
     },
     {
       icon: <BriefcaseIcon size={28} className="sm:w-8 sm:h-8" />,
-      title: "End-to-End Solutions",
+      title: "Career Support",
       description:
-        "Complete project oversight from strategy to implementation.",
-      iconColor: "sky",
+        "Complete assistance from training to international job placement.",
+      iconColor: "theme-success",
     },
   ];
 
@@ -199,17 +185,18 @@ const HomeWhyUs = () => {
             className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800"
             variants={titleElementVariants}
           >
-            Why Choose GSK Consultants
+            Why Choose Vishwabharti
           </motion.h2>
           <motion.div
-            className="w-16 sm:w-20 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mt-3 sm:mt-4 mb-4 sm:mb-6"
+            className="w-16 sm:w-20 h-1 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success mx-auto mt-3 sm:mt-4 mb-4 sm:mb-6"
             variants={titleElementVariants}
           ></motion.div>
           <motion.p
             className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto px-2 sm:px-0"
             variants={titleElementVariants}
           >
-            What sets our consulting and project management services apart.
+            What sets our driver training programs apart and why we're the
+            preferred choice for aspiring professional drivers.
           </motion.p>
         </motion.div>
 

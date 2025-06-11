@@ -13,31 +13,32 @@ const Button = ({
   type = "button",
   disabled = false,
 }) => {
-  // Color configurations
+  // Color configurations using theme colors
   const colors = {
     blue: {
-      primary: "bg-[#00B5CA] hover:bg-[#00a3b6] text-white",
-      outline: "border border-[#00B5CA] text-[#00B5CA] hover:bg-[#00B5CA]/10",
+      primary: "bg-theme-accent hover:bg-theme-accent/90 text-white",
+      outline:
+        "border border-theme-accent text-theme-accent hover:bg-theme-accent/10",
     },
     gradient: {
       primary:
-        "bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:from-indigo-700 hover:via-sky-700 hover:to-teal-700 text-white",
+        "bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success hover:from-theme-warning hover:via-theme-primary hover:to-theme-green-light text-white",
       outline:
-        "border border-transparent bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600/10",
+        "border border-transparent bg-clip-text text-transparent bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success hover:bg-theme-primary/10",
     },
     yellow: {
-      primary:
-        "bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:from-indigo-700 hover:via-sky-700 hover:to-teal-700 text-white",
+      primary: "bg-theme-primary hover:bg-theme-warning text-white",
       outline:
-        "border border-transparent bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600/10",
+        "border border-theme-primary text-theme-primary hover:bg-theme-primary/10",
     },
     white: {
-      primary: "bg-white hover:bg-gray-100 text-gray-900",
+      primary: "bg-white hover:bg-gray-100 text-theme-dark",
       outline: "border border-white text-white hover:bg-white/10",
     },
     dark: {
-      primary: "bg-gray-900 hover:bg-gray-800 text-white",
-      outline: "border border-gray-900 text-gray-900 hover:bg-gray-900/10",
+      primary: "bg-theme-secondary hover:bg-theme-dark text-white",
+      outline:
+        "border border-theme-secondary text-theme-secondary hover:bg-theme-secondary/10",
     },
   };
 

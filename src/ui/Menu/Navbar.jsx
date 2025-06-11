@@ -79,7 +79,7 @@ const Navbar = () => {
     bottom: "-2px",
     left: 0,
     background:
-      "linear-gradient(to right, var(--color-theme-primary), var(--color-theme-accent))",
+      "linear-gradient(to right, var(--color-theme-primary), var(--color-theme-success))",
     transform: "scaleX(0)",
     transformOrigin: "left",
     transition: "transform 0.3s ease-out",
@@ -88,7 +88,7 @@ const Navbar = () => {
   return (
     <>
       {/* Announcement Banner */}
-      <div className="bg-gradient-to-r from-theme-primary via-theme-accent to-theme-secondary text-white overflow-hidden py-1">
+      <div className="bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success text-white overflow-hidden py-1">
         <div className="flex whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-8 mx-4 text-sm font-medium"

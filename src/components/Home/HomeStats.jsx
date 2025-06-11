@@ -78,27 +78,27 @@ const HomeStats = () => {
     },
   };
 
-  // Define icon colors for a professional look
+  // Define icon colors using theme colors
   const iconColors = [
-    "text-indigo-600",
-    "text-sky-600",
-    "text-teal-600",
-    "text-violet-600",
+    "text-theme-primary",
+    "text-theme-accent",
+    "text-theme-success",
+    "text-theme-green-light",
   ];
 
   // Stats data
   const stats = [
     {
       icon: <Briefcase size={28} />,
-      value: 250,
+      value: 500,
       suffix: "+",
-      label: "Projects Completed",
+      label: "Students Trained",
     },
     {
       icon: <Users size={28} />,
-      value: 120,
+      value: 450,
       suffix: "+",
-      label: "Satisfied Clients",
+      label: "Successful Placements",
     },
     {
       icon: <Award size={28} />,
@@ -108,7 +108,7 @@ const HomeStats = () => {
     },
     {
       icon: <Globe size={28} />,
-      value: 20,
+      value: 25,
       suffix: "+",
       label: "Countries Served",
     },
@@ -116,7 +116,7 @@ const HomeStats = () => {
 
   return (
     <section
-      id="home-stats-section" // Added ID for scroll target
+      id="home-stats-section"
       ref={ref}
       className="py-12 sm:py-16 md:pt-24 pb-4 bg-gray-50"
       style={{
@@ -156,9 +156,9 @@ const HomeStats = () => {
                 }}
               >
                 <div className="flex flex-col md:flex-row items-center">
-                  {/* Icon with circular background */}
+                  {/* Icon with circular background using theme colors */}
                   <motion.div
-                    className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 md:mb-0 md:mr-4 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-full flex items-center justify-center ${iconColors[index]}`}
+                    className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 md:mb-0 md:mr-4 bg-gradient-to-r from-theme-light to-theme-light rounded-full flex items-center justify-center ${iconColors[index]}`}
                     variants={iconVariants}
                     initial="initial"
                     animate={isInView ? "animate" : "initial"}
@@ -195,7 +195,7 @@ const HomeStats = () => {
                       ) : (
                         <span>0</span>
                       )}
-                      <span className="bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success bg-clip-text text-transparent">
                         {stat.suffix}
                       </span>
                     </motion.div>
@@ -208,10 +208,10 @@ const HomeStats = () => {
                 </div>
               </motion.div>
 
-              {/* Vertical separator line (except after the last item) */}
+              {/* Vertical separator line with theme colors */}
               {index < stats.length - 1 && (
                 <motion.div
-                  className="hidden md:block h-16 w-px bg-gradient-to-b from-indigo-200 via-sky-200 to-teal-200 mx-4"
+                  className="hidden md:block h-16 w-px bg-gradient-to-b from-theme-primary/20 via-theme-accent/20 to-theme-success/20 mx-4"
                   variants={separatorVariants}
                   initial="initial"
                   animate={isInView ? "animate" : "initial"}

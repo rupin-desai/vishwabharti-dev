@@ -17,25 +17,41 @@ const ContactCard = ({ compact = false }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const industryOptions = [
-    { value: "", label: "Select your industry" },
-    { value: "manufacturing", label: "Manufacturing" },
-    { value: "technology", label: "Technology" },
-    { value: "healthcare", label: "Healthcare" },
-    { value: "finance", label: "Financial Services" },
-    { value: "retail", label: "Retail & Consumer Goods" },
-    { value: "energy", label: "Energy & Utilities" },
-    { value: "education", label: "Education" },
+    { value: "", label: "Select your background" },
+    { value: "fresh-graduate", label: "Fresh Graduate/Student" },
+    { value: "experienced-driver", label: "Experienced Driver" },
+    { value: "transport-industry", label: "Transport Industry Worker" },
+    { value: "career-change", label: "Career Change Seeker" },
+    { value: "unemployed", label: "Currently Unemployed" },
     { value: "other", label: "Other" },
   ];
 
   const serviceOptions = [
-    { value: "", label: "Select a service" },
-    { value: "business-consulting", label: "Business & Management Consulting" },
-    { value: "project-management", label: "Project Management Services" },
-    { value: "strategy", label: "Strategic Planning & Execution" },
-    { value: "operations", label: "Operations Optimization" },
-    { value: "digital-transformation", label: "Digital Transformation" },
-    { value: "market-analysis", label: "Market Research & Analysis" },
+    { value: "", label: "Select a training program" },
+    {
+      value: "basic-driver-training",
+      label: "Basic Driver Training (4 weeks)",
+    },
+    {
+      value: "advanced-driver-training",
+      label: "Advanced Driver Training (8 weeks)",
+    },
+    {
+      value: "professional-certification",
+      label: "Professional Driver Certification (12 weeks)",
+    },
+    {
+      value: "international-certification",
+      label: "International Driver Certification (16 weeks)",
+    },
+    {
+      value: "adr-certification",
+      label: "ADR Hazardous Materials Certification",
+    },
+    {
+      value: "language-training",
+      label: "Language Training (IELTS/German/Spanish)",
+    },
     { value: "general-inquiry", label: "General Inquiry" },
   ];
 
@@ -124,15 +140,17 @@ Name: ${formData.name}
 Company: ${formData.companyName || "Not provided"}
 Contact Number: ${formData.contactNumber}
 Email: ${formData.email}
-Industry: ${selectedIndustry ? selectedIndustry.label : "Not specified"}
-Service Interest: ${selectedService ? selectedService.label : formData.service}
+Background: ${selectedIndustry ? selectedIndustry.label : "Not specified"}
+Training Program Interest: ${
+        selectedService ? selectedService.label : formData.service
+      }
 
 Message:
 ${formData.message || "No additional message provided."}
       `;
 
       // Create mailto link
-      const mailtoLink = `mailto:info@gskconsulting.com?subject=Business Inquiry from ${
+      const mailtoLink = `mailto:info@vishwabharti.com?subject=Driver Training Inquiry from ${
         formData.name
       }&body=${encodeURIComponent(emailBody)}`;
 
@@ -155,19 +173,14 @@ ${formData.message || "No additional message provided."}
       {/* Card Container with enhanced styling */}
       <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
         {/* Header section with gradient background */}
-        <div
-          className={`bg-gradient-to-r ${
-            compact
-              ? "from-indigo-600 to-sky-600"
-              : "from-[#e6b400] to-[#d6a700]"
-          } p-5 md:p-6`}
-        >
+        <div className="bg-gradient-to-r from-theme-primary to-theme-success p-5 md:p-6">
           <h3 className="text-xl md:text-2xl font-bold text-white">
             {compact ? "Send Us a Message" : "Contact Us"}
           </h3>
           {!compact && (
             <p className="text-white/90 mt-2">
-              Fill out this form to discuss how we can help your business
+              Fill out this form to discuss your driver training needs and
+              career goals
             </p>
           )}
         </div>
@@ -177,7 +190,7 @@ ${formData.message || "No additional message provided."}
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-8">
               <div className="bg-green-100 rounded-full p-4 mb-4">
-                <CheckCircle size={48} className="text-green-600" />
+                <CheckCircle size={48} className="text-theme-success" />
               </div>
               <h4 className="text-xl font-bold text-gray-800 mb-2">
                 Thank You!
@@ -188,9 +201,7 @@ ${formData.message || "No additional message provided."}
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className={`text-${
-                  compact ? "indigo" : "[#e6b400]"
-                }-600 font-medium hover:underline`}
+                className="text-theme-primary font-medium hover:underline"
               >
                 Send another inquiry
               </button>
@@ -216,11 +227,7 @@ ${formData.message || "No additional message provided."}
                       className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${
                         errors.name
                           ? "border-red-500 focus:ring-red-200"
-                          : `border-gray-300 focus:ring-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }/20 focus:border-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }`
+                          : "border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       }`}
                       placeholder="John Smith"
                     />
@@ -246,11 +253,7 @@ ${formData.message || "No additional message provided."}
                       className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${
                         errors.email
                           ? "border-red-500 focus:ring-red-200"
-                          : `border-gray-300 focus:ring-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }/20 focus:border-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }`
+                          : "border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       }`}
                       placeholder="john.smith@example.com"
                     />
@@ -280,11 +283,7 @@ ${formData.message || "No additional message provided."}
                       className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 ${
                         errors.contactNumber
                           ? "border-red-500 focus:ring-red-200"
-                          : `border-gray-300 focus:ring-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }/20 focus:border-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }`
+                          : "border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       }`}
                       placeholder="+91 98765 43210"
                     />
@@ -309,31 +308,27 @@ ${formData.message || "No additional message provided."}
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 border-gray-300 focus:ring-${
-                        compact ? "indigo" : "[#e6b400]"
-                      }/20 focus:border-${compact ? "indigo" : "[#e6b400]"}`}
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       placeholder="ABC Corporation"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Industry */}
+                  {/* Industry/Background */}
                   <div>
                     <label
                       htmlFor="industry"
                       className="block text-gray-700 font-medium mb-1"
                     >
-                      Your Industry
+                      Your Background
                     </label>
                     <select
                       id="industry"
                       name="industry"
                       value={formData.industry}
                       onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 appearance-none bg-white border-gray-300 focus:ring-${
-                        compact ? "indigo" : "[#e6b400]"
-                      }/20 focus:border-${compact ? "indigo" : "[#e6b400]"}`}
+                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 appearance-none bg-white border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       style={{
                         backgroundImage:
                           "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")",
@@ -357,7 +352,7 @@ ${formData.message || "No additional message provided."}
                       htmlFor="service"
                       className="block text-gray-700 font-medium mb-1"
                     >
-                      Service of Interest*
+                      Training Program of Interest*
                     </label>
                     <select
                       id="service"
@@ -367,11 +362,7 @@ ${formData.message || "No additional message provided."}
                       className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 appearance-none bg-white ${
                         errors.service
                           ? "border-red-500 focus:ring-red-200"
-                          : `border-gray-300 focus:ring-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }/20 focus:border-${
-                              compact ? "indigo" : "[#e6b400]"
-                            }`
+                          : "border-gray-300 focus:ring-theme-primary/20 focus:border-theme-primary"
                       }`}
                       style={{
                         backgroundImage:
@@ -402,7 +393,7 @@ ${formData.message || "No additional message provided."}
                     htmlFor="message"
                     className="block text-gray-700 font-medium mb-1"
                   >
-                    How can we help?
+                    How can we help you achieve your driving career goals?
                   </label>
                   <textarea
                     id="message"
@@ -410,12 +401,8 @@ ${formData.message || "No additional message provided."}
                     value={formData.message}
                     onChange={handleChange}
                     rows="3"
-                    className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-${
-                      compact ? "indigo" : "[#e6b400]"
-                    }/20 focus:border-${
-                      compact ? "indigo" : "[#e6b400]"
-                    } border-gray-300`}
-                    placeholder="Tell us about your business needs or specific challenges you're facing..."
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-primary/20 focus:border-theme-primary border-gray-300"
+                    placeholder="Tell us about your career goals, experience level, preferred training schedule, or any specific questions..."
                   ></textarea>
                 </div>
 
@@ -423,7 +410,7 @@ ${formData.message || "No additional message provided."}
                 <div>
                   <Button
                     type="submit"
-                    color={compact ? "gradient" : "yellow"}
+                    color="gradient"
                     className="w-full group"
                   >
                     <span className="flex items-center justify-center">
@@ -441,9 +428,7 @@ ${formData.message || "No additional message provided."}
                   By submitting this form, you agree to our{" "}
                   <a
                     href="/privacy-policy"
-                    className={`text-${
-                      compact ? "indigo" : "[#e6b400]"
-                    }-600 hover:underline`}
+                    className="text-theme-primary hover:underline"
                   >
                     Privacy Policy
                   </a>

@@ -18,10 +18,11 @@ const ContactPage = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
             Get in Touch
           </h1>
-          <div className="w-24 h-1 bg-[#e6b400] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-theme-primary mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            We're here to answer your questions and discuss how GSK Consulting
-            can help your business thrive.
+            Ready to start your journey as a professional driver? Contact us to
+            learn more about our comprehensive training programs and
+            international opportunities.
           </p>
         </motion.div>
 
@@ -36,7 +37,7 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Visit Our Office
+            Visit Our Training Center
           </motion.h2>
 
           {/* Two-column layout for larger screens */}
@@ -56,7 +57,7 @@ const ContactPage = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="GSK Consulting Office Location"
+                  title="Vishwabharti Training Center Location"
                 ></iframe>
               </div>
             </motion.div>
@@ -69,7 +70,7 @@ const ContactPage = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <h2 className="text-xl font-bold text-gray-800 mb-6">
-                Send Us a Message
+                Quick Inquiry
               </h2>
               <form className="space-y-6">
                 <div>
@@ -78,17 +79,30 @@ const ContactPage = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
+                    placeholder="Your full name"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
+                    Phone Number
                   </label>
                   <input
-                    type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                    type="tel"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
+                    placeholder="+91 98765 43210"
                   />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Program of Interest
+                  </label>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent">
+                    <option>Basic Driver Training</option>
+                    <option>Advanced Driver Training</option>
+                    <option>International Certification</option>
+                    <option>ADR Certification</option>
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -96,12 +110,13 @@ const ContactPage = () => {
                   </label>
                   <textarea
                     rows="4"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme-primary focus:border-transparent"
+                    placeholder="Tell us about your training goals..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="bg-[#e6b400] text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                  className="bg-theme-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-theme-warning transition-colors w-full"
                 >
                   Send Message
                 </button>

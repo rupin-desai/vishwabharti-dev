@@ -1,0 +1,527 @@
+{
+  "business-consulting": {
+    "slug": "business-consulting",
+    "hero": {
+      "title": "Business & Management",
+      "subtitle": "Consulting Services",
+      "description": "Expert guidance to optimize your operations, enhance decision-making, and drive sustainable business growth through data-driven insights and strategic planning.",
+      "backgroundImage": "https://images.unsplash.com/photo-1573167243872-43c6433b9d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80",
+      "strategyImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80",
+      "summary": "Get comprehensive business consulting services designed to identify opportunities, overcome challenges, and drive measurable business growth. Our consultants bring decades of expertise across industries.",
+      "details": [
+        {
+          "title": "Strategic Analysis",
+          "subtitle": "Data-driven insights"
+        },
+        {
+          "title": "Process Optimization",
+          "subtitle": "Efficiency improvements"
+        },
+        {
+          "title": "Change Management",
+          "subtitle": "Smooth transitions"
+        },
+        {
+          "title": "Performance Metrics",
+          "subtitle": "Measurable results"
+        }
+      ]
+    },
+    "about": {
+      "title": "Expert Business Consulting",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "paragraphs": [
+        "Our business consulting services are designed to help organizations improve their performance, create value, and achieve their business goals. With deep industry knowledge and practical experience, our consultants deliver tailored solutions that address your unique challenges and opportunities.",
+        "We take a collaborative approach, working closely with your team to understand your business from the inside out. This allows us to identify inefficiencies, recommend practical improvements, and help implement solutions that deliver real results.",
+        "Whether you need assistance with strategic planning, operational efficiency, financial management, or digital transformation, our experienced consultants provide the expertise and guidance you need to succeed in today's competitive business environment."
+      ]
+    },
+    "benefits": {
+      "title": "Benefits of Our Business Consulting",
+      "description": "Partner with GSK Consultants to transform your business operations and achieve sustainable growth.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "items": [
+        "Increase operational efficiency and reduce costs",
+        "Develop effective strategies aligned with your business goals",
+        "Improve decision-making through data-driven insights",
+        "Identify and capitalize on new market opportunities",
+        "Enhance organizational structure and team performance",
+        "Implement sustainable business practices",
+        "Navigate complex business challenges with expert guidance",
+        "Achieve measurable ROI on your consulting investment"
+      ]
+    },
+    "offerings": {
+      "title": "Our Business Consulting Services",
+      "categories": [
+        {
+          "title": "Strategic Planning",
+          "services": [
+            {
+              "no": "1",
+              "name": "Market Analysis & Research",
+              "duration": "2-4 weeks",
+              "delivery": "On-site"
+            },
+            {
+              "no": "2",
+              "name": "Competitive Positioning",
+              "duration": "2-3 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "3",
+              "name": "Growth Strategy Development",
+              "duration": "4-6 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "4",
+              "name": "Business Model Innovation",
+              "duration": "3-5 weeks",
+              "delivery": "On-site"
+            }
+          ]
+        },
+        {
+          "title": "Operational Excellence",
+          "services": [
+            {
+              "no": "1",
+              "name": "Process Optimization",
+              "duration": "3-6 weeks",
+              "delivery": "On-site"
+            },
+            {
+              "no": "2",
+              "name": "Supply Chain Management",
+              "duration": "4-8 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "3",
+              "name": "Quality Management Systems",
+              "duration": "6-10 weeks",
+              "delivery": "On-site"
+            },
+            {
+              "no": "4",
+              "name": "Cost Reduction Strategies",
+              "duration": "3-4 weeks",
+              "delivery": "Remote"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Customized Solutions",
+          "description": "All consulting engagements are tailored to your specific business needs and can be adjusted in scope and duration"
+        },
+        {
+          "title": "Delivery Methods",
+          "description": "On-site (at your location), Remote (virtual consulting), or Hybrid (combination of both) options available"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Industries We Serve",
+      "description": "Our business consulting expertise spans across multiple industries, allowing us to bring cross-sector insights and best practices to your organization.",
+      "industries": [
+        {
+          "title": "Manufacturing",
+          "description": "Streamline operations, optimize production, and improve supply chain efficiency for manufacturing businesses.",
+          "icon": "Factory"
+        },
+        {
+          "title": "Healthcare",
+          "description": "Enhance patient care, optimize administrative processes, and navigate regulatory compliance in healthcare.",
+          "icon": "Activity"
+        },
+        {
+          "title": "Technology",
+          "description": "Accelerate growth, develop go-to-market strategies, and optimize product development for tech companies.",
+          "icon": "Cpu"
+        },
+        {
+          "title": "Financial Services",
+          "description": "Improve risk management, enhance customer experience, and navigate regulatory challenges in financial services.",
+          "icon": "BarChart"
+        },
+        {
+          "title": "Retail",
+          "description": "Optimize inventory management, enhance customer experience, and develop omnichannel strategies for retailers.",
+          "icon": "ShoppingBag"
+        },
+        {
+          "title": "Energy",
+          "description": "Develop sustainability strategies, optimize operations, and navigate the transition to renewable energy.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Education",
+          "description": "Improve administrative efficiency, enhance student experiences, and develop strategic plans for educational institutions.",
+          "icon": "GraduationCap"
+        },
+        {
+          "title": "Non-Profit",
+          "description": "Optimize resource allocation, enhance fundraising strategies, and maximize social impact for non-profit organizations.",
+          "icon": "Heart"
+        }
+      ]
+    }
+  },
+  "project-management": {
+    "slug": "project-management",
+    "hero": {
+      "title": "Professional",
+      "subtitle": "Project Management Services",
+      "description": "Deliver your projects on time, within budget, and to the highest quality standards with our expert project management services. From planning to execution and beyond.",
+      "backgroundImage": "https://images.unsplash.com/photo-1586282391129-76a6df230234?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "strategyImage": "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+      "summary": "Our comprehensive project management services ensure your initiatives are completed successfully, with meticulous planning, precise execution, and detailed monitoring throughout the project lifecycle.",
+      "details": [
+        {
+          "title": "Full Lifecycle Management",
+          "subtitle": "From initiation to closure"
+        },
+        {
+          "title": "Resource Optimization",
+          "subtitle": "Efficient allocation"
+        },
+        {
+          "title": "Risk Mitigation",
+          "subtitle": "Proactive management"
+        },
+        {
+          "title": "Quality Assurance",
+          "subtitle": "Highest standards"
+        }
+      ]
+    },
+    "about": {
+      "title": "Expert Project Management",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "paragraphs": [
+        "Our project management services provide structured guidance and oversight to ensure your initiatives are delivered successfully. We employ proven methodologies and industry best practices to plan, execute, and monitor projects of any size and complexity.",
+        "With our expert project managers at the helm, we help you define clear objectives, establish realistic timelines, allocate resources efficiently, and identify potential risks before they become issues. This systematic approach minimizes disruptions and keeps your projects on track.",
+        "Whether you need complete project management for a major initiative or supplemental support for your existing team, we provide the expertise, tools, and processes to ensure your projects are completed on time, within budget, and to your satisfaction."
+      ]
+    },
+    "benefits": {
+      "title": "Benefits of Our Project Management",
+      "description": "Maximize project success and minimize risks with GSK Consultants' proven project management expertise.",
+      "image": "https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "items": [
+        "Ensure on-time, on-budget project delivery",
+        "Improve resource allocation and utilization",
+        "Reduce project risks through proactive identification and mitigation",
+        "Enhance stakeholder communication and engagement",
+        "Maintain consistent quality standards throughout project execution",
+        "Increase visibility into project progress and performance",
+        "Adapt quickly to changing requirements or conditions",
+        "Capture lessons learned for continuous improvement"
+      ]
+    },
+    "offerings": {
+      "title": "Our Project Management Services",
+      "categories": [
+        {
+          "title": "Project Planning & Execution",
+          "services": [
+            {
+              "no": "1",
+              "name": "Project Scoping & Planning",
+              "duration": "1-3 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "2",
+              "name": "Schedule Development & Management",
+              "duration": "1-2 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "3",
+              "name": "Resource Allocation & Management",
+              "duration": "Ongoing",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "4",
+              "name": "Budget Development & Control",
+              "duration": "Ongoing",
+              "delivery": "Hybrid"
+            }
+          ]
+        },
+        {
+          "title": "Specialized Project Services",
+          "services": [
+            {
+              "no": "1",
+              "name": "Risk Management",
+              "duration": "Ongoing",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "2",
+              "name": "Stakeholder Management",
+              "duration": "Ongoing",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "3",
+              "name": "Project Recovery",
+              "duration": "Varies",
+              "delivery": "On-site"
+            },
+            {
+              "no": "4",
+              "name": "Project Audit & Review",
+              "duration": "2-3 weeks",
+              "delivery": "Hybrid"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Methodology",
+          "description": "We utilize industry-standard methodologies (PMBOK, Agile, Waterfall, etc.) tailored to your project needs"
+        },
+        {
+          "title": "Flexibility",
+          "description": "Our services can be engaged for complete project management or to supplement your existing capabilities"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Projects We Manage",
+      "description": "Our project management expertise spans various types of initiatives across multiple industries, delivering consistent results regardless of project complexity.",
+      "industries": [
+        {
+          "title": "Digital Transformation",
+          "description": "Managing technology implementation projects that modernize business processes and systems.",
+          "icon": "Smartphone"
+        },
+        {
+          "title": "Infrastructure Development",
+          "description": "Overseeing construction and renovation projects for commercial and industrial facilities.",
+          "icon": "Building"
+        },
+        {
+          "title": "Product Launch",
+          "description": "Coordinating the successful introduction of new products and services to market.",
+          "icon": "Rocket"
+        },
+        {
+          "title": "Business Process Redesign",
+          "description": "Managing initiatives to optimize and streamline organizational workflows and procedures.",
+          "icon": "GitBranch"
+        },
+        {
+          "title": "Organizational Change",
+          "description": "Guiding businesses through mergers, acquisitions, and major operational changes.",
+          "icon": "RefreshCcw"
+        },
+        {
+          "title": "System Integration",
+          "description": "Overseeing projects that connect disparate systems for seamless information flow.",
+          "icon": "Link"
+        },
+        {
+          "title": "Compliance Programs",
+          "description": "Managing initiatives to meet regulatory requirements and industry standards.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Event Management",
+          "description": "Planning and executing complex corporate events, conferences, and product launches.",
+          "icon": "Calendar"
+        }
+      ]
+    }
+  },
+  "strategy": {
+    "slug": "strategy",
+    "hero": {
+      "title": "Strategic Planning",
+      "subtitle": "& Execution",
+      "description": "Develop and implement winning strategies that align with your vision, capitalize on market opportunities, and create sustainable competitive advantage.",
+      "backgroundImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "strategyImage": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "summary": "Our strategic planning services help you create a clear roadmap for achieving your business objectives, with actionable implementation plans and effective monitoring systems to ensure successful execution.",
+      "details": [
+        {
+          "title": "Market Analysis",
+          "subtitle": "Competitive insights"
+        },
+        {
+          "title": "Vision Development",
+          "subtitle": "Clear direction"
+        },
+        {
+          "title": "Implementation Planning",
+          "subtitle": "Actionable steps"
+        },
+        {
+          "title": "Performance Monitoring",
+          "subtitle": "Tracking progress"
+        }
+      ]
+    },
+    "about": {
+      "title": "Comprehensive Strategic Planning",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80",
+      "paragraphs": [
+        "Our strategic planning services help you navigate the complex business landscape with clarity and purpose. We work with you to develop comprehensive strategies that align with your vision and values while responding to market realities and competitive dynamics.",
+        "We take a holistic approach to strategy, considering both external factors (market trends, competitive landscape, customer needs) and internal capabilities (resources, core competencies, organizational structure). This balanced perspective ensures strategies that are both ambitious and achievable.",
+        "Beyond planning, we focus on successful implementation by creating detailed action plans, establishing key performance indicators, and designing monitoring systems. This execution-focused approach bridges the gap between strategic thinking and tangible business results."
+      ]
+    },
+    "benefits": {
+      "title": "Benefits of Strategic Planning",
+      "description": "Create a clear roadmap for your organization's future with GSK Consultants' strategic planning expertise.",
+      "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "items": [
+        "Establish a clear direction and purpose for your organization",
+        "Align resources with your highest-priority objectives",
+        "Identify and capitalize on new market opportunities",
+        "Develop sustainable competitive advantages",
+        "Improve decision-making through shared strategic understanding",
+        "Create organizational alignment around common goals",
+        "Enhance adaptability to changing market conditions",
+        "Transform vision into measurable business results"
+      ]
+    },
+    "offerings": {
+      "title": "Our Strategic Planning Services",
+      "categories": [
+        {
+          "title": "Strategy Development",
+          "services": [
+            {
+              "no": "1",
+              "name": "Strategic Assessment & Diagnosis",
+              "duration": "2-3 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "2",
+              "name": "Vision & Mission Development",
+              "duration": "1-2 weeks",
+              "delivery": "On-site"
+            },
+            {
+              "no": "3",
+              "name": "Strategic Goal Setting",
+              "duration": "2-3 weeks",
+              "delivery": "On-site"
+            },
+            {
+              "no": "4",
+              "name": "Competitive Strategy Formulation",
+              "duration": "3-4 weeks",
+              "delivery": "Hybrid"
+            }
+          ]
+        },
+        {
+          "title": "Strategy Execution",
+          "services": [
+            {
+              "no": "1",
+              "name": "Action Plan Development",
+              "duration": "2-3 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "2",
+              "name": "KPI Development & Monitoring",
+              "duration": "1-2 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "3",
+              "name": "Strategy Communication Planning",
+              "duration": "1-2 weeks",
+              "delivery": "Hybrid"
+            },
+            {
+              "no": "4",
+              "name": "Strategy Review & Adaptation",
+              "duration": "Ongoing",
+              "delivery": "Hybrid"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Custom Approach",
+          "description": "Our strategic planning process is tailored to your organization's size, industry, and specific challenges"
+        },
+        {
+          "title": "Stakeholder Involvement",
+          "description": "We employ collaborative methodologies to ensure buy-in from key stakeholders throughout the strategy development process"
+        }
+      ]
+    },
+    "clients": {
+      "title": "Strategic Focus Areas",
+      "description": "Our strategic planning services address key business challenges and opportunities across various domains.",
+      "industries": [
+        {
+          "title": "Business Growth",
+          "description": "Develop strategies to enter new markets, launch new products, or expand existing business lines.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Market Positioning",
+          "description": "Create distinctive value propositions and competitive advantages in your target markets.",
+          "icon": "Target"
+        },
+        {
+          "title": "Digital Transformation",
+          "description": "Plan and execute digital initiatives that transform business operations and customer experiences.",
+          "icon": "Code"
+        },
+        {
+          "title": "Operational Excellence",
+          "description": "Develop strategies to optimize internal processes and enhance organizational capabilities.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Innovation Management",
+          "description": "Create systems and processes that foster continuous innovation and product development.",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Turnaround Strategy",
+          "description": "Develop plans to revitalize underperforming business units or reverse declining performance.",
+          "icon": "RotateCcw"
+        },
+        {
+          "title": "Sustainability Planning",
+          "description": "Integrate environmental and social responsibility into your business strategy.",
+          "icon": "Leaf"
+        },
+        {
+          "title": "Succession Planning",
+          "description": "Prepare for leadership transitions and ensure organizational continuity.",
+          "icon": "Users"
+        }
+      ]
+    }
+  }
+}

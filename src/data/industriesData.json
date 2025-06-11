@@ -1,0 +1,404 @@
+{
+  "manufacturing": {
+    "slug": "manufacturing",
+    "hero": {
+      "title": "Manufacturing",
+      "subtitle": "Industry Solutions",
+      "description": "Optimize production, streamline operations, and drive innovation in your manufacturing business with our specialized consulting services.",
+      "backgroundImage": "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "criteria": [
+        {
+          "icon": "Factory",
+          "title": "Industry",
+          "value": "Manufacturing"
+        },
+        {
+          "icon": "Settings",
+          "title": "Focus Areas",
+          "value": "Operations & Efficiency"
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Outcome",
+          "value": "Increased Productivity"
+        },
+        {
+          "icon": "BarChart2",
+          "title": "Approach",
+          "value": "Data-Driven Solutions"
+        },
+        {
+          "icon": "Zap",
+          "title": "Technology",
+          "value": "Industry 4.0 Integration"
+        },
+        {
+          "icon": "Users",
+          "title": "Client Size",
+          "value": "Small to Enterprise"
+        }
+      ]
+    },
+    "about": {
+      "title": "Manufacturing Industry Expertise",
+      "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "paragraphs": [
+        "Our manufacturing consulting services are designed to address the unique challenges faced by modern manufacturers in a rapidly evolving industry landscape. We combine deep industry knowledge with practical expertise to help manufacturing companies optimize operations, reduce costs, and drive sustainable growth.",
+        "With experience spanning discrete manufacturing, process manufacturing, and hybrid environments, our consultants understand the complexities of production systems, supply chain integration, and technology implementation. We work closely with your team to identify inefficiencies, recommend practical improvements, and implement solutions that deliver measurable results."
+      ]
+    },
+    "challenges": {
+      "title": "Manufacturing Industry Challenges",
+      "features": [
+        {
+          "title": "Supply Chain Vulnerabilities",
+          "description": "Navigate disruptions, reduce dependencies, and build resilient supply networks through strategic sourcing and contingency planning.",
+          "icon": "Link"
+        },
+        {
+          "title": "Digital Transformation",
+          "description": "Implement Industry 4.0 technologies including IoT, AI, and advanced analytics to create smart, connected factories and production systems.",
+          "icon": "Cpu"
+        },
+        {
+          "title": "Operational Efficiency",
+          "description": "Optimize production processes, reduce waste, and improve throughput with lean manufacturing principles and continuous improvement methodologies.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Workforce Development",
+          "description": "Address skills gaps, improve training programs, and develop strategies to attract and retain manufacturing talent in a competitive market.",
+          "icon": "Users"
+        },
+        {
+          "title": "Quality Management",
+          "description": "Implement robust quality control systems, reduce defects, and ensure consistent product quality across production lines and facilities.",
+          "icon": "Check"
+        },
+        {
+          "title": "Sustainability Initiatives",
+          "description": "Develop eco-friendly manufacturing practices, reduce energy consumption, and minimize environmental impact while maintaining profitability.",
+          "icon": "Leaf"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Our Manufacturing Solutions",
+      "image": "https://images.unsplash.com/photo-1565514020179-026b92b2ed33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "cards": [
+        {
+          "title": "Technology-Driven Manufacturing",
+          "description": [
+            "Industry 4.0 implementation strategy and roadmap development",
+            "IoT and connected factory infrastructure planning",
+            "Manufacturing execution systems (MES) optimization",
+            "Predictive maintenance program development"
+          ],
+          "theme": "Digital Solutions"
+        },
+        {
+          "title": "Operational Excellence",
+          "description": [
+            "Lean manufacturing implementation and training",
+            "Process optimization and waste reduction",
+            "Capacity planning and production scheduling",
+            "Overall equipment effectiveness (OEE) improvement"
+          ],
+          "theme": "Process Optimization"
+        },
+        {
+          "title": "Strategic Manufacturing",
+          "description": [
+            "Manufacturing network optimization and facility planning",
+            "Make vs. buy analysis and sourcing strategy",
+            "New product introduction (NPI) process improvement",
+            "Manufacturing cost reduction initiatives"
+          ],
+          "theme": "Strategic Planning"
+        }
+      ]
+    },
+    "approach": {
+      "title": "Our Manufacturing Approach",
+      "description": "We use a data-driven, collaborative approach to deliver manufacturing solutions that drive measurable business results.",
+      "items": [
+        "Comprehensive manufacturing assessment and benchmarking",
+        "Strategic roadmap development with clear implementation phases",
+        "Technology selection and integration planning",
+        "Process redesign and workflow optimization",
+        "Performance measurement and KPI development",
+        "Change management and implementation support",
+        "Continuous improvement program development",
+        "Knowledge transfer and capability building"
+      ]
+    }
+  },
+  "technology": {
+    "slug": "technology",
+    "hero": {
+      "title": "Technology",
+      "subtitle": "Industry Solutions",
+      "description": "Navigate digital transformation, accelerate growth, and build resilient technology operations with our specialized consulting services for tech companies.",
+      "backgroundImage": "https://images.unsplash.com/photo-1581092921461-39b51d3bbb91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "criteria": [
+        {
+          "icon": "Cpu",
+          "title": "Industry",
+          "value": "Technology"
+        },
+        {
+          "icon": "Rocket",
+          "title": "Focus Areas",
+          "value": "Growth & Innovation"
+        },
+        {
+          "icon": "Zap",
+          "title": "Outcome",
+          "value": "Accelerated Development"
+        },
+        {
+          "icon": "Code",
+          "title": "Approach",
+          "value": "Agile Methodologies"
+        },
+        {
+          "icon": "Shield",
+          "title": "Security",
+          "value": "Risk Mitigation"
+        },
+        {
+          "icon": "Users",
+          "title": "Client Size",
+          "value": "Startups to Enterprise"
+        }
+      ]
+    },
+    "about": {
+      "title": "Technology Industry Expertise",
+      "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
+      "paragraphs": [
+        "Our technology consulting services help software companies, IT service providers, and tech startups navigate the rapidly evolving digital landscape. We combine industry insights with practical expertise to help technology companies accelerate growth, optimize operations, and deliver exceptional customer experiences.",
+        "With experience spanning SaaS, enterprise software, cybersecurity, fintech, and emerging technologies, our consultants understand the unique challenges and opportunities in the tech sector. We work closely with technology leaders to develop strategies that drive innovation, scale operations, and create sustainable competitive advantage."
+      ]
+    },
+    "challenges": {
+      "title": "Technology Industry Challenges",
+      "features": [
+        {
+          "title": "Rapid Innovation Cycles",
+          "description": "Stay ahead of the competition with accelerated product development processes and innovation frameworks that drive continuous improvement.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Talent Acquisition & Retention",
+          "description": "Develop strategies to attract, develop and retain top technical talent in a highly competitive market through culture and career development.",
+          "icon": "Users"
+        },
+        {
+          "title": "Scalable Infrastructure",
+          "description": "Design and implement cloud architecture and DevOps practices that can scale reliably to support rapid business growth and changing demands.",
+          "icon": "Server"
+        },
+        {
+          "title": "Cybersecurity & Compliance",
+          "description": "Strengthen security posture and ensure regulatory compliance with comprehensive risk assessment and security frameworks.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Go-to-Market Strategy",
+          "description": "Develop effective product positioning, pricing strategies, and channel partnerships to accelerate market adoption and revenue growth.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Customer Experience",
+          "description": "Create seamless, personalized user experiences that drive customer satisfaction, retention, and advocacy for your technology products.",
+          "icon": "Heart"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Our Technology Solutions",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "cards": [
+        {
+          "title": "Technology Strategy & Transformation",
+          "description": [
+            "Digital transformation roadmap development",
+            "Technology stack assessment and optimization",
+            "IT governance and operating model design",
+            "Technical debt reduction strategy"
+          ],
+          "theme": "Strategic Planning"
+        },
+        {
+          "title": "Product & Engineering Excellence",
+          "description": [
+            "Agile/DevOps implementation and optimization",
+            "Product management maturity assessment",
+            "Engineering process improvement",
+            "Quality assurance and testing strategy"
+          ],
+          "theme": "Development Optimization"
+        },
+        {
+          "title": "Growth & Innovation",
+          "description": [
+            "Technology commercialization strategy",
+            "New market entry planning",
+            "Partnership and ecosystem development",
+            "Innovation program design and implementation"
+          ],
+          "theme": "Market Expansion"
+        }
+      ]
+    },
+    "approach": {
+      "title": "Our Technology Approach",
+      "description": "We bring a collaborative, agile approach to technology consulting that emphasizes rapid results and sustainable value creation.",
+      "items": [
+        "Comprehensive technology and product assessment",
+        "Market and competitive analysis",
+        "Agile roadmap development with clear milestones",
+        "Technical architecture review and optimization",
+        "Engineering process improvement",
+        "Data and analytics strategy development",
+        "Change management and implementation support",
+        "Knowledge transfer and capability building"
+      ]
+    }
+  },
+  "healthcare": {
+    "slug": "healthcare",
+    "hero": {
+      "title": "Healthcare",
+      "subtitle": "Industry Solutions",
+      "description": "Improve patient outcomes, optimize operations, and navigate regulatory challenges with our specialized consulting services for healthcare organizations.",
+      "backgroundImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
+      "criteria": [
+        {
+          "icon": "Heart",
+          "title": "Industry",
+          "value": "Healthcare"
+        },
+        {
+          "icon": "Activity",
+          "title": "Focus Areas",
+          "value": "Patient Care & Operations"
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Outcome",
+          "value": "Improved Clinical Outcomes"
+        },
+        {
+          "icon": "Stethoscope",
+          "title": "Approach",
+          "value": "Evidence-Based Solutions"
+        },
+        {
+          "icon": "Shield",
+          "title": "Compliance",
+          "value": "Regulatory Expertise"
+        },
+        {
+          "icon": "Building",
+          "title": "Client Types",
+          "value": "Providers to Payers"
+        }
+      ]
+    },
+    "about": {
+      "title": "Healthcare Industry Expertise",
+      "image": "https://images.unsplash.com/photo-1631815589058-601b2b9b4d87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1572&q=80",
+      "paragraphs": [
+        "Our healthcare consulting services help hospitals, clinics, health systems, and other healthcare organizations navigate complex challenges in a rapidly evolving industry. We combine clinical insights with business expertise to improve patient care, operational efficiency, and financial performance.",
+        "With experience spanning provider operations, healthcare technology, regulatory compliance, and strategic planning, our consultants understand the unique dynamics of healthcare delivery. We work collaboratively with healthcare leaders to develop practical solutions that enhance clinical quality while optimizing resources and ensuring sustainability."
+      ]
+    },
+    "challenges": {
+      "title": "Healthcare Industry Challenges",
+      "features": [
+        {
+          "title": "Cost Containment",
+          "description": "Identify opportunities to reduce expenses while maintaining or improving quality of care through process optimization and resource management.",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "Clinical Workforce Shortages",
+          "description": "Develop strategies to address staffing challenges, reduce burnout, and improve retention of clinical professionals in a competitive market.",
+          "icon": "Users"
+        },
+        {
+          "title": "Technology Integration",
+          "description": "Implement and optimize electronic health records, telehealth platforms, and clinical decision support systems to enhance care delivery.",
+          "icon": "Laptop"
+        },
+        {
+          "title": "Regulatory Compliance",
+          "description": "Navigate complex healthcare regulations and ensure compliance with evolving standards while minimizing administrative burden.",
+          "icon": "FileText"
+        },
+        {
+          "title": "Value-Based Care Transition",
+          "description": "Develop strategies to succeed in value-based payment models by improving care coordination, outcomes measurement, and population health management.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Patient Experience Enhancement",
+          "description": "Create seamless, patient-centered care journeys that improve satisfaction, engagement, and ultimately, clinical outcomes.",
+          "icon": "Heart"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Our Healthcare Solutions",
+      "image": "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "cards": [
+        {
+          "title": "Clinical Operations Excellence",
+          "description": [
+            "Patient flow optimization and capacity management",
+            "Clinical workforce planning and productivity improvement",
+            "Care pathway redesign and standardization",
+            "Quality and safety program enhancement"
+          ],
+          "theme": "Operational Improvement"
+        },
+        {
+          "title": "Healthcare Technology Strategy",
+          "description": [
+            "Healthcare IT assessment and strategic planning",
+            "EHR optimization and workflow redesign",
+            "Telehealth implementation and expansion",
+            "Healthcare data analytics and insights development"
+          ],
+          "theme": "Technology Enhancement"
+        },
+        {
+          "title": "Strategic Healthcare Planning",
+          "description": [
+            "Service line strategy and development",
+            "Merger, acquisition, and partnership planning",
+            "Facility planning and optimization",
+            "Financial performance improvement"
+          ],
+          "theme": "Strategic Growth"
+        }
+      ]
+    },
+    "approach": {
+      "title": "Our Healthcare Approach",
+      "description": "We bring a patient-centered, data-driven approach to healthcare consulting that balances clinical quality with operational efficiency.",
+      "items": [
+        "Comprehensive performance assessment and benchmarking",
+        "Evidence-based solution development",
+        "Cross-functional stakeholder engagement",
+        "Clinical and operational workflow analysis",
+        "Performance measurement and outcomes tracking",
+        "Change management and implementation support",
+        "Regulatory compliance assurance",
+        "Knowledge transfer and capability building"
+      ]
+    }
+  }
+}

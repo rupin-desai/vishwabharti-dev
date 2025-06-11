@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Satoshi Variable Font */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+@theme {
+  /* Theme variables */
+  --color-custom-yellow: #e6b400;
+}
+
+/* Apply Satoshi as the default font for the entire application */
+@layer base {
+  html {
+    font-family: 'Satoshi', 'Poppins', system-ui, sans-serif;
+  }
+}

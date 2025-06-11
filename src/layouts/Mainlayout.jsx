@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../ui/Menu/Navbar";
 import Footer from "../ui/Menu/Footer";
+import TruckScrollIndicator from "../components/TruckScrollIndicator";
 
 const Mainlayout = () => {
   return (
@@ -13,6 +14,9 @@ const Mainlayout = () => {
       </main>
 
       <Footer />
+
+      {/* Truck Scroll Indicator */}
+      <TruckScrollIndicator />
     </div>
   );
 };

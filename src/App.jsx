@@ -2,11 +2,10 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Mainlayout from "./layouts/Mainlayout";
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
+import LearnPage from "./pages/LearnPage";
 import ContactPage from "./pages/ContactPage";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries"; // Added Industries import
+import BookPage from "./pages/BookPage";
+import ProgramPage from "./pages/ProgramPage";
 
 const router = createBrowserRouter([
   {
@@ -18,32 +17,20 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "about",
-        element: <AboutPage />,
+        path: "learn",
+        element: <LearnPage />,
       },
       {
         path: "contact",
         element: <ContactPage />,
       },
       {
-        path: "services",
-        element: <Services />,
+        path: "book",
+        element: <BookPage />,
       },
       {
-        path: "services/:serviceSlug",
-        element: <Services />,
-      },
-      {
-        path: "industries",
-        element: <Industries />,
-      },
-      {
-        path: "industries/:industrySlug",
-        element: <Industries />,
-      },
-      {
-        path: "privacy-policy",
-        element: <PrivacyPolicy />,
+        path: "program",
+        element: <ProgramPage />,
       },
     ],
   },

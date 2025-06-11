@@ -17,11 +17,19 @@
   font-display: swap;
 }
 
-
-
 @theme {
-  /* Theme variables */
-  --color-custom-yellow: #e6b400;
+  /* Driver Apprenticeship Program Theme */
+  --color-theme-primary: #f59e0b; /* Amber yellow for energy and opportunity */
+  --color-theme-secondary: #1f2937; /* Dark gray for professionalism */
+  --color-theme-accent: #3b82f6; /* Blue for trust and reliability */
+  --color-theme-success: #10b981; /* Green for growth and success */
+  --color-theme-warning: #f97316; /* Orange for safety and alerts */
+  --color-theme-light: #fef3c7; /* Light yellow background */
+  --color-theme-dark: #111827; /* Very dark for text */
+  --color-theme-neutral: #6b7280; /* Gray for subtle elements */
+  
+  /* Legacy support */
+  --color-custom-yellow: #f59e0b;
 }
 
 /* Apply Satoshi as the default font for the entire application */
@@ -29,4 +37,38 @@
   html {
     font-family: 'Satoshi', 'Poppins', system-ui, sans-serif;
   }
+}
+
+/* Theme color utilities */
+@layer utilities {
+  .text-theme-primary { color: var(--color-theme-primary); }
+  .text-theme-secondary { color: var(--color-theme-secondary); }
+  .text-theme-accent { color: var(--color-theme-accent); }
+  .text-theme-success { color: var(--color-theme-success); }
+  .text-theme-warning { color: var(--color-theme-warning); }
+  .text-theme-light { color: var(--color-theme-light); }
+  .text-theme-dark { color: var(--color-theme-dark); }
+  .text-theme-neutral { color: var(--color-theme-neutral); }
+  
+  .bg-theme-primary { background-color: var(--color-theme-primary); }
+  .bg-theme-secondary { background-color: var(--color-theme-secondary); }
+  .bg-theme-accent { background-color: var(--color-theme-accent); }
+  .bg-theme-success { background-color: var(--color-theme-success); }
+  .bg-theme-warning { background-color: var(--color-theme-warning); }
+  .bg-theme-light { background-color: var(--color-theme-light); }
+  .bg-theme-dark { background-color: var(--color-theme-dark); }
+  .bg-theme-neutral { background-color: var(--color-theme-neutral); }
+  
+  .border-theme-primary { border-color: var(--color-theme-primary); }
+  .border-theme-secondary { border-color: var(--color-theme-secondary); }
+  .border-theme-accent { border-color: var(--color-theme-accent); }
+  .border-theme-success { border-color: var(--color-theme-success); }
+  .border-theme-warning { border-color: var(--color-theme-warning); }
+  
+  .hover\:text-theme-primary:hover { color: var(--color-theme-primary); }
+  .hover\:text-theme-secondary:hover { color: var(--color-theme-secondary); }
+  .hover\:text-theme-accent:hover { color: var(--color-theme-accent); }
+  
+  .hover\:bg-theme-primary:hover { background-color: var(--color-theme-primary); }
+  .hover\:bg-theme-warning:hover { background-color: var(--color-theme-warning); }
 }

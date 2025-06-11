@@ -1,6 +1,49 @@
-# React + Vite
+# Driver Apprenticeship Program
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive web platform for the Driver Apprenticeship Program, empowering Indian drivers for global opportunities in the logistics industry.
+
+## Features
+
+- **Program Overview**: Detailed information about training programs for freshers and experienced drivers
+- **Training Process**: Step-by-step guide from application to global deployment
+- **Multi-language Support**: Information about IELTS, German (A1/B2), and Spanish ADR certifications
+- **Responsive Design**: Built with React, Vite, and Tailwind CSS for optimal user experience
+
+## Tech Stack
+
+- **Frontend**: React 19 with Vite
+- **Styling**: Tailwind CSS 4.x with custom theme variables
+- **Routing**: React Router DOM
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Satoshi Variable Font
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Project Structure
+
+- `/src/pages/` - Main application pages
+- `/src/layouts/` - Layout components
+- `/src/components/` - Reusable UI components
+- `/public/` - Static assets including fonts and logos
+
+## Development
+
+This template provides a minimal setup to get React working in Vite with HMR and ESLint rules.
 
 Currently, two official plugins are available:
 

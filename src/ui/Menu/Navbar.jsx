@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import {
   Menu,
-  ChevronDown,
   CheckCircle,
   BarChart2,
   PieChart,
@@ -17,39 +16,14 @@ import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
   const location = useLocation();
   const bannerControls = useAnimation();
   const currentYear = new Date().getFullYear();
 
-  // Timeout ref for delayed dropdown closing
-  const closeTimeoutRef = useRef(null);
-
   // States for scroll behavior
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-
-  // Function to show dropdown - clear any pending timeout
-  const showDropdown = (dropdown) => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-    setActiveDropdown(dropdown);
-  };
-
-  // Function to hide dropdown with delay
-  const hideDropdown = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 300); // 300ms delay before closing
-  };
-
-  // Check if a path is active
-  const isPathActive = (path) => {
-    return location.pathname.startsWith(path);
-  };
 
   // Handle scroll behavior
   useEffect(() => {
@@ -76,15 +50,6 @@ const Navbar = () => {
     setVisible(true);
     setIsMenuOpen(false);
   }, [location.pathname]);
-
-  // Clean up timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
-    };
-  }, []);
 
   // Banner scrolling animation
   useEffect(() => {
@@ -113,7 +78,8 @@ const Navbar = () => {
     height: "2px",
     bottom: "-2px",
     left: 0,
-    backgroundImage: "linear-gradient(to right, #4f46e5, #0284c7, #0d9488)",
+    background:
+      "linear-gradient(to right, var(--color-theme-primary), var(--color-theme-accent))",
     transform: "scaleX(0)",
     transformOrigin: "left",
     transition: "transform 0.3s ease-out",
@@ -121,8 +87,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Announcement Banner - Updated with gradient */}
-      <div className="bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 text-white overflow-hidden py-1">
+      {/* Announcement Banner */}
+      <div className="bg-gradient-to-r from-theme-primary via-theme-accent to-theme-secondary text-white overflow-hidden py-1">
         <div className="flex whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-8 mx-4 text-sm font-medium"
@@ -130,78 +96,34 @@ const Navbar = () => {
           >
             <div className="flex items-center gap-1.5">
               <Briefcase size={14} className="stroke-[2.5]" />
-              <span>Expert Business & Management Consulting</span>
+              <span>Professional Driver Training Programs</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
               <Users size={14} className="stroke-[2.5]" />
-              <span>Client-Focused Project Management</span>
+              <span>International Certification Available</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
               <BarChart2 size={14} className="stroke-[2.5]" />
-              <span>Strategic Business Growth Solutions</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <PieChart size={14} className="stroke-[2.5]" />
-              <span>Data-Driven Decision Making</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <LineChart size={14} className="stroke-[2.5]" />
-              <span>Performance Optimization</span>
+              <span>Global Employment Opportunities</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
               <CheckCircle size={14} className="stroke-[2.5]" />
-              <span>Proven Track Record of Success</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <Briefcase size={14} className="stroke-[2.5]" />
-              <span>
-                Trusted by Leading Businesses Since {currentYear - 10}
-              </span>
+              <span>100% Job Placement Assistance</span>
             </div>
 
             {/* Second set for continuous scrolling */}
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
               <Briefcase size={14} className="stroke-[2.5]" />
-              <span>Expert Business & Management Consulting</span>
+              <span>Professional Driver Training Programs</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
               <Users size={14} className="stroke-[2.5]" />
-              <span>Client-Focused Project Management</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <BarChart2 size={14} className="stroke-[2.5]" />
-              <span>Strategic Business Growth Solutions</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <PieChart size={14} className="stroke-[2.5]" />
-              <span>Data-Driven Decision Making</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <LineChart size={14} className="stroke-[2.5]" />
-              <span>Performance Optimization</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <CheckCircle size={14} className="stroke-[2.5]" />
-              <span>Proven Track Record of Success</span>
-            </div>
-            <CircleDot size={6} className="opacity-60" />
-            <div className="flex items-center gap-1.5">
-              <Briefcase size={14} className="stroke-[2.5]" />
-              <span>
-                Trusted by Leading Businesses Since {currentYear - 10}
-              </span>
+              <span>International Certification Available</span>
             </div>
           </motion.div>
         </div>
@@ -213,20 +135,20 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          {/* Logo - Updated to use image */}
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src="/logos/logo_full.png"
-              alt="GSK Consulting Logo"
+              alt="Vishwabharti Logo"
               className="h-18 object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex uppercase space-x-8">
-            {/* Home Link with span wrapper */}
+            {/* Home Link */}
             <span
-              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              className="text-gray-700 hover:text-theme-primary"
               style={navLinkStyle}
               onMouseEnter={() => setHoveredItem("home")}
               onMouseLeave={() => setHoveredItem(null)}
@@ -236,7 +158,7 @@ const Navbar = () => {
                 end
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    ? "font-medium uppercase text-theme-primary"
                     : "font-medium uppercase"
                 }
               >
@@ -253,209 +175,94 @@ const Navbar = () => {
               ></span>
             </span>
 
-            {/* About Link with span wrapper */}
+            {/* Learn Link */}
             <span
-              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              className="text-gray-700 hover:text-theme-primary"
               style={navLinkStyle}
-              onMouseEnter={() => setHoveredItem("about")}
+              onMouseEnter={() => setHoveredItem("learn")}
               onMouseLeave={() => setHoveredItem(null)}
             >
               <NavLink
-                to="/about"
+                to="/learn"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    ? "font-medium uppercase text-theme-primary"
                     : "font-medium uppercase"
                 }
               >
-                About
+                Learn
               </NavLink>
               <span
                 style={{
                   ...navLinkAfterStyle,
                   transform:
-                    location.pathname === "/about" || hoveredItem === "about"
+                    location.pathname === "/learn" || hoveredItem === "learn"
                       ? "scaleX(1)"
                       : "scaleX(0)",
                 }}
               ></span>
             </span>
 
-            {/* Services Dropdown */}
-            <div className="relative">
-              {/* Button trigger only - reduced hitbox */}
-              <div
-                className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => {
-                  showDropdown("services");
-                  setHoveredItem("services");
-                }}
-                onMouseLeave={() => {
-                  hideDropdown();
-                  setHoveredItem(null);
-                }}
-              >
-                <span
-                  className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  style={navLinkStyle}
-                >
-                  <NavLink
-                    to="/services"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
-                        : "font-medium uppercase"
-                    }
-                  >
-                    Services
-                  </NavLink>
-                  <span
-                    style={{
-                      ...navLinkAfterStyle,
-                      transform:
-                        location.pathname.startsWith("/services") ||
-                        hoveredItem === "services"
-                          ? "scaleX(1)"
-                          : "scaleX(0)",
-                    }}
-                  ></span>
-                </span>
-                <ChevronDown
-                  size={16}
-                  className="text-gray-600 hover:text-sky-600 transition-colors"
-                />
-              </div>
-
-              {/* Dropdown Menu */}
-              <div
-                className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => {
-                  showDropdown("services");
-                  setHoveredItem("services");
-                }}
-                onMouseLeave={() => {
-                  hideDropdown();
-                  setHoveredItem(null);
-                }}
-              >
-                <div
-                  className={`bg-white shadow-lg rounded-md py-2 w-72 transform transition-all duration-200 ${
-                    activeDropdown === "services"
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
-                >
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/services/business-consulting">
-                        Business & Management Consulting
-                      </Link>
-                    </span>
-                  </div>
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/services/project-management">
-                        Project Management Services
-                      </Link>
-                    </span>
-                  </div>
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/services/strategic-planning">
-                        Strategic Planning & Execution
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Industries Dropdown */}
-            <div className="relative">
-              {/* Button trigger only - reduced hitbox */}
-              <div
-                className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => {
-                  showDropdown("industries");
-                  setHoveredItem("industries");
-                }}
-                onMouseLeave={() => {
-                  hideDropdown();
-                  setHoveredItem(null);
-                }}
-              >
-                <span
-                  className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  style={navLinkStyle}
-                >
-                  <NavLink
-                    to="/industries"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
-                        : "font-medium uppercase"
-                    }
-                  >
-                    Industries
-                  </NavLink>
-                  <span
-                    style={{
-                      ...navLinkAfterStyle,
-                      transform:
-                        location.pathname.startsWith("/industries") ||
-                        hoveredItem === "industries"
-                          ? "scaleX(1)"
-                          : "scaleX(0)",
-                    }}
-                  ></span>
-                </span>
-                <ChevronDown
-                  size={16}
-                  className="text-gray-600 hover:text-sky-600 transition-colors"
-                />
-              </div>
-
-              {/* Dropdown Menu */}
-              <div
-                className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => {
-                  showDropdown("industries");
-                  setHoveredItem("industries");
-                }}
-                onMouseLeave={() => {
-                  hideDropdown();
-                  setHoveredItem(null);
-                }}
-              >
-                <div
-                  className={`bg-white shadow-lg rounded-md py-2 w-64 transform transition-all duration-200 ${
-                    activeDropdown === "industries"
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
-                >
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/industries/manufacturing">Manufacturing</Link>
-                    </span>
-                  </div>
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/industries/technology">Technology</Link>
-                    </span>
-                  </div>
-                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
-                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                      <Link to="/industries/healthcare">Healthcare</Link>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Link with span wrapper */}
+            {/* Program Link */}
             <span
-              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              className="text-gray-700 hover:text-theme-primary"
+              style={navLinkStyle}
+              onMouseEnter={() => setHoveredItem("program")}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <NavLink
+                to="/program"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium uppercase text-theme-primary"
+                    : "font-medium uppercase"
+                }
+              >
+                Program
+              </NavLink>
+              <span
+                style={{
+                  ...navLinkAfterStyle,
+                  transform:
+                    location.pathname === "/program" ||
+                    hoveredItem === "program"
+                      ? "scaleX(1)"
+                      : "scaleX(0)",
+                }}
+              ></span>
+            </span>
+
+            {/* Book Link */}
+            <span
+              className="text-gray-700 hover:text-theme-primary"
+              style={navLinkStyle}
+              onMouseEnter={() => setHoveredItem("book")}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <NavLink
+                to="/book"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium uppercase text-theme-primary"
+                    : "font-medium uppercase"
+                }
+              >
+                Book
+              </NavLink>
+              <span
+                style={{
+                  ...navLinkAfterStyle,
+                  transform:
+                    location.pathname === "/book" || hoveredItem === "book"
+                      ? "scaleX(1)"
+                      : "scaleX(0)",
+                }}
+              ></span>
+            </span>
+
+            {/* Contact Link */}
+            <span
+              className="text-gray-700 hover:text-theme-primary"
               style={navLinkStyle}
               onMouseEnter={() => setHoveredItem("contact")}
               onMouseLeave={() => setHoveredItem(null)}
@@ -464,7 +271,7 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    ? "font-medium uppercase text-theme-primary"
                     : "font-medium uppercase"
                 }
               >
@@ -485,8 +292,8 @@ const Navbar = () => {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="/contact" color="gradient">
-              GET STARTED
+            <Button to="/book" color="gradient">
+              BOOK NOW
             </Button>
           </div>
 
@@ -494,7 +301,7 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(true)}
-            className="md:hidden text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+            className="md:hidden text-gray-700 hover:text-theme-primary"
             aria-label="Open menu"
           >
             <Menu size={28} />

@@ -61,11 +61,54 @@ const ContactPage = () => {
               </div>
             </motion.div>
 
-            
+            {/* Contact form section */}
+            <motion.div
+              className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 w-full"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <h2 className="text-xl font-bold text-gray-800 mb-6">
+                Send Us a Message
+              </h2>
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    rows="4"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e6b400] focus:border-transparent"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="bg-[#e6b400] text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

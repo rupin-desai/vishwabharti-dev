@@ -12,39 +12,40 @@ const Footer = () => {
             <Link to="/">
               <img
                 src="/logos/logo_full.png"
-                alt="GSK Consulting Logo"
+                alt="Vishwabharti Logo"
                 className="h-24 md:h-24"
               />
             </Link>
             <p className="text-gray-600 mt-4 text-center md:text-left">
-              Your trusted partner in consulting and project management.
+              Empowering your journey through comprehensive driver
+              apprenticeship programs.
             </p>
           </div>
 
-          {/* Services Section */}
+          {/* Quick Links Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600">
-              Our Services
+            <h3 className="text-lg font-semibold mb-4 text-theme-primary">
+              Quick Links
             </h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                  <Link to="#">Business & Management Consulting</Link>
+                <span className="text-gray-600 hover:text-theme-primary">
+                  <Link to="/learn">Learn & Training</Link>
                 </span>
               </li>
               <li>
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                  <Link to="#">Project Management Services</Link>
+                <span className="text-gray-600 hover:text-theme-primary">
+                  <Link to="/program">Program Overview</Link>
                 </span>
               </li>
               <li>
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                  <Link to="#">Customized Solutions</Link>
+                <span className="text-gray-600 hover:text-theme-primary">
+                  <Link to="/book">Book Training</Link>
                 </span>
               </li>
               <li>
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                  <Link to="#">Strategic Planning</Link>
+                <span className="text-gray-600 hover:text-theme-primary">
+                  <Link to="/contact">Contact Us</Link>
                 </span>
               </li>
             </ul>
@@ -52,31 +53,34 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600">
+            <h3 className="text-lg font-semibold mb-4 text-theme-primary">
               Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone
                   size={20}
-                  className="mr-2 text-indigo-600 flex-shrink-0"
+                  className="mr-2 text-theme-primary flex-shrink-0"
                 />
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                <span className="text-gray-600 hover:text-theme-primary">
                   <a href="tel:+9193226 06890">(+91) 93226 06890</a>
                 </span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-sky-600 flex-shrink-0" />
-                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
-                  <a href="mailto:info@gskconsulting.com">
-                    info@gskconsulting.com
+                <Mail
+                  size={20}
+                  className="mr-2 text-theme-accent flex-shrink-0"
+                />
+                <span className="text-gray-600 hover:text-theme-primary">
+                  <a href="mailto:info@vishwabharti.com">
+                    info@vishwabharti.com
                   </a>
                 </span>
               </li>
               <li className="flex items-start">
                 <MapPin
                   size={20}
-                  className="mr-2 text-teal-600 flex-shrink-0 mt-1"
+                  className="mr-2 text-theme-success flex-shrink-0 mt-1"
                 />
                 <span className="text-gray-600">
                   Sector 12, Kharghar, Navi Mumbai,
@@ -91,7 +95,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-center items-center">
           <p className="text-gray-600 text-sm mb-2 md:mb-0">
-            © {new Date().getFullYear()} GSK Consulting. All Rights Reserved.
+            © {new Date().getFullYear()} Vishwabharti. All Rights Reserved.
           </p>
         </div>
       </div>

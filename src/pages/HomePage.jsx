@@ -7,17 +7,19 @@ import HomeInfo from "../components/Home/HomeInfo";
 import HomeColabs from "../components/Home/HomeColabs";
 import HomeStats from "../components/Home/HomeStats";
 import HomeContact from "../components/Home/HomeContact";
+import HomeCandidateTypes from "../components/Home/HomeCandidateTypes";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <Homehero />
       <HomeStats />
       <HomeBanner />
-      <HomeColabs />
+      <HomeCandidateTypes />
       <HomeAbout />
       <HomeWhyUs />
       <HomeInfo />
+      <HomeColabs />
       <HomeContact />
       <div className="container mx-auto px-4 py-8">
         <section className="text-center py-16">
@@ -33,7 +35,7 @@ const HomePage = () => {
           </button>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

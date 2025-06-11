@@ -1,31 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export const useTruckScroll = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  useEffect(() => {
-    const calculateScrollProgress = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
+  // Throttle the scroll calculation for better performance
+  const calculateScrollProgress = useCallback(() => {
+    const scrollTop = window.pageYOffset;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    setScrollProgress(Math.min(Math.max(scrollPercent, 0), 100));
+  }, []);
 
-      setScrollProgress(Math.min(Math.max(scrollPercent, 0), 100));
+  useEffect(() => {
+    // Throttle scroll events
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          calculateScrollProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     // Calculate initial scroll progress
     calculateScrollProgress();
 
-    // Add scroll event listener
-    window.addEventListener("scroll", calculateScrollProgress, {
-      passive: true,
-    });
+    // Add throttled scroll event listener
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    // Cleanup
     return () => {
-      window.removeEventListener("scroll", calculateScrollProgress);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [calculateScrollProgress]);
 
   return scrollProgress;
 };

@@ -176,7 +176,7 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("learn")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <a href="#" className="font-medium uppercase">
+              <a href="/learn" className="font-medium uppercase">
                 Learn
               </a>
               <span
@@ -195,7 +195,7 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("program")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <a href="#" className="font-medium uppercase">
+              <a href="/program" className="font-medium uppercase">
                 Program
               </a>
               <span
@@ -214,7 +214,7 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("book")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <a href="#" className="font-medium uppercase">
+              <a href="/book" className="font-medium uppercase">
                 Book
               </a>
               <span
@@ -232,7 +232,7 @@ const Navbar = () => {
               onMouseEnter={() => setHoveredItem("contact")}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <a href="#" className="font-medium uppercase">
+              <a href="/contact" className="font-medium uppercase">
                 Contact
               </a>
               <span

@@ -5,26 +5,27 @@ const LearnCTA = () => {
   const fadeUp = (delay = 0) => ({
     hidden: {
       opacity: 0,
-      transform: "translate3d(0, 40px, 0)",
+      transform: "translate3d(0, 30px, 0)",
     },
     visible: {
       opacity: 1,
       transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
-        stiffness: 100,
-        damping: 20,
+        stiffness: 140, // Higher = faster snap
+        damping: 16, // Lower = more bounce
+        mass: 0.9,
         delay,
       },
     },
   });
 
   return (
-    <section className="mt-24 px-4">
+    <section className="mt-15 px-4">
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.4 }}
         variants={fadeUp(0)}
         className="bg-theme-light/60 backdrop-blur-md border border-theme-light rounded-2xl px-6 py-16 text-center shadow-md space-y-6 sm:space-y-7"
         style={{
@@ -44,7 +45,7 @@ const LearnCTA = () => {
           variants={fadeUp(0.2)}
           className="text-lg sm:text-xl text-theme-neutral max-w-2xl mx-auto"
         >
-          You’ve learned the process. You’ve seen the skills. Now take the first
+          You've learned the process. You've seen the skills. Now take the first
           step.
         </motion.p>
 

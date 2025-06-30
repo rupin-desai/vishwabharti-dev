@@ -10,7 +10,6 @@ const ProgramPage = () => {
     <div className="min-h-screen bg-white">
       <ProgramHero />
       <ProgramJourney />
-
       <ProgramJobRoles />
       <ProgramCTA />
     </div>

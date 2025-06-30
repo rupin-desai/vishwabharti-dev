@@ -16,7 +16,6 @@ const jobRoles = [
     icon: Truck,
     salary: "$45,000 - $65,000",
     features: ["Interstate routes", "Modern trucks", "Flexible schedules"],
-    color: "from-theme-primary to-theme-secondary",
   },
   {
     title: "Hazard Goods Carrier",
@@ -25,7 +24,6 @@ const jobRoles = [
     icon: AlertTriangle,
     salary: "$55,000 - $75,000",
     features: ["Safety training", "Premium rates", "Specialized equipment"],
-    color: "from-theme-secondary to-theme-primary",
   },
   {
     title: "Logistic Fleet Driver",
@@ -33,7 +31,6 @@ const jobRoles = [
     icon: Package,
     salary: "$40,000 - $55,000",
     features: ["Team coordination", "Regular routes", "Fleet benefits"],
-    color: "from-theme-primary to-theme-secondary",
   },
   {
     title: "Freight & Container Transporter",
@@ -45,7 +42,6 @@ const jobRoles = [
       "International cargo",
       "Growth opportunities",
     ],
-    color: "from-theme-secondary to-theme-primary",
   },
 ];
 
@@ -86,7 +82,7 @@ const ProgramJobRoles = () => {
   return (
     <section
       ref={ref}
-      className="px-4 py-20 bg-gradient-to-br from-theme-primary/5 to-theme-secondary/5"
+      className="px-4 py-20 bg-gradient-to-br from-theme-primary/5 to-theme-success/5"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -122,19 +118,14 @@ const ProgramJobRoles = () => {
               onClick={() =>
                 setSelectedJob(selectedJob === index ? null : index)
               }
-              className={`
-                bg-white rounded-3xl p-8 cursor-pointer transition-all duration-300 border-2
-                ${
-                  selectedJob === index
-                    ? "border-theme-primary/30 shadow-2xl"
-                    : "border-theme-light hover:border-theme-primary/20 shadow-lg hover:shadow-xl"
-                }
-              `}
+              className={`bg-white rounded-3xl p-8 cursor-pointer transition-all duration-300 border-2 ${
+                selectedJob === index
+                  ? "border-theme-primary/30 shadow-2xl"
+                  : "border-theme-light hover:border-theme-primary/20 shadow-lg hover:shadow-xl"
+              }`}
             >
               <div className="flex items-start justify-between mb-6">
-                <div
-                  className={`w-16 h-16 bg-gradient-to-r ${job.color} rounded-2xl flex items-center justify-center`}
-                >
+                <div className="w-16 h-16 bg-gradient-to-r from-theme-primary to-theme-success rounded-2xl flex items-center justify-center">
                   <job.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-right">
@@ -154,7 +145,7 @@ const ProgramJobRoles = () => {
               <div className="space-y-2">
                 {job.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-theme-secondary" />
+                    <CheckCircle className="w-4 h-4 text-theme-success" />
                     <span className="text-theme-neutral">{feature}</span>
                   </div>
                 ))}

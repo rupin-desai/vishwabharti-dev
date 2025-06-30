@@ -61,7 +61,7 @@ const ProgramHero = () => {
       icon: Globe,
       number: "15+",
       label: "Countries",
-      color: "theme-secondary",
+      color: "theme-success",
     },
     {
       icon: Star,
@@ -74,7 +74,7 @@ const ProgramHero = () => {
   return (
     <section
       ref={ref}
-      className="relative px-4 py-20 bg-gradient-to-br from-theme-primary/5 to-theme-secondary/5 overflow-hidden"
+      className="relative px-4 py-20 bg-gradient-to-br from-theme-primary/5 to-theme-success/5 overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-theme-primary/10 to-transparent"></div>
       <div className="relative max-w-6xl mx-auto">
@@ -88,7 +88,7 @@ const ProgramHero = () => {
             initial={{ scale: 0 }}
             animate={isInView ? { scale: 1 } : { scale: 0 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-theme-primary to-theme-secondary text-white px-6 py-3 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-theme-primary to-theme-success text-white px-6 py-3 rounded-full mb-6"
           >
             <Target className="w-5 h-5" />
             <span className="font-semibold">Structured Program</span>
@@ -96,7 +96,7 @@ const ProgramHero = () => {
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-theme-dark mb-6 leading-tight">
             Program Structured to{" "}
-            <span className="bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-theme-primary to-theme-success bg-clip-text text-transparent">
               Secure Your Future
             </span>{" "}
             Abroad
@@ -113,7 +113,7 @@ const ProgramHero = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button className="bg-gradient-to-r from-theme-primary to-theme-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 group">
+            <button className="bg-gradient-to-r from-theme-primary to-theme-success text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2 group">
               Start Your Journey
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -138,7 +138,7 @@ const ProgramHero = () => {
               className="bg-white p-6 rounded-2xl shadow-lg border border-theme-light"
             >
               <div
-                className={`w-12 h-12 bg-gradient-to-r from-${stat.color} to-theme-secondary rounded-xl flex items-center justify-center mb-4`}
+                className={`w-12 h-12 bg-gradient-to-r from-theme-primary to-theme-success rounded-xl flex items-center justify-center mb-4`}
               >
                 <stat.icon className="w-6 h-6 text-white" />
               </div>

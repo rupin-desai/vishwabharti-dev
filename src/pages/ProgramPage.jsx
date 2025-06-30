@@ -1,9 +1,9 @@
 // pages/ProgramPage.jsx
 import React from "react";
-import ProgramHero from "../components/Program/ProgramHero";
-import ProgramJourney from "../components/Program/ProgramJourney";
-import ProgramCTA from "../components/Program/ProgramCTA";
-import ProgramJobroles from "../components/Program/ProgramJobroles";
+import ProgramHero from "../Program/ProgramHero";
+import ProgramJourney from "../Program/ProgramJourney";
+import ProgramCTA from "../Program/ProgramCTA";
+import ProgramJobroles from "../Program/ProgramJobroles";
 
 const ProgramPage = () => {
   return (

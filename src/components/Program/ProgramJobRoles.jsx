@@ -45,7 +45,7 @@ const jobRoles = [
   },
 ];
 
-const ProgramJobRoles = () => {
+const ProgramJobroles = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [selectedJob, setSelectedJob] = useState(null);
@@ -166,4 +166,4 @@ const ProgramJobRoles = () => {
   );
 };
 
-export default ProgramJobRoles;
+export default ProgramJobroles;

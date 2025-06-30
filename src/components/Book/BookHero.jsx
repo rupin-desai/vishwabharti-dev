@@ -1,114 +1,114 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Calendar, Clock, CheckCircle } from "lucide-react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Globe } from "lucide-react";
+import Button from "../../ui/Components/Button";
 
 const BookHero = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.3,
       },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      transform: "translate3d(-40px, 0, 0)",
+    },
     visible: {
       opacity: 1,
-      y: 0,
+      transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
-        stiffness: 100,
-        damping: 15,
+        stiffness: 120,
+        damping: 14,
+      },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: {
+      opacity: 0,
+      transform: "translate3d(0, 40px, 0)",
+    },
+    visible: {
+      opacity: 1,
+      transform: "translate3d(0, 0, 0)",
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 14,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      transform: "translate3d(0, 30px, 0)",
+    },
+    visible: {
+      opacity: 1,
+      transform: "translate3d(0, 0, 0)",
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 14,
       },
     },
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-theme-light via-white to-theme-light overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-theme-primary/10 to-theme-success/10 rounded-full -translate-y-32 translate-x-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-theme-accent/10 to-theme-primary/10 rounded-full translate-y-24 -translate-x-24"></div>
+    <section
+      ref={ref}
+      className="relative h-[calc(100vh-180px)] w-full flex items-center justify-center bg-gradient-to-br from-theme-primary/10 via-white to-theme-success/10"
+    >
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-md"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="relative z-10 text-center max-w-4xl px-4 sm:px-6">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
-          variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
         >
-          <motion.span
-            className="inline-block px-4 py-2 bg-theme-primary/10 text-theme-primary rounded-full font-medium text-sm mb-6"
-            variants={itemVariants}
+          <motion.div
+            variants={headingVariants}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-theme-primary to-theme-success text-white px-6 py-3 rounded-full mb-6"
           >
-            Professional Driver Training
-          </motion.span>
+            <Globe className="w-5 h-5" />
+            <span className="font-semibold">Global Journey</span>
+          </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-theme-dark mb-6 leading-tight"
-            variants={itemVariants}
+            variants={headingVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-dark leading-tight mb-4"
           >
-            Book Your Journey to
-            <span className="block bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success bg-clip-text text-transparent">
-              Professional Success
+            Your Global Journey{" "}
+            <span className="bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success bg-clip-text text-transparent">
+              Begins With One Click
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-xl text-theme-neutral mb-8 max-w-2xl mx-auto leading-relaxed"
-            variants={itemVariants}
+            variants={paragraphVariants}
+            className="text-lg sm:text-xl text-theme-neutral max-w-2xl mx-auto mb-8"
           >
-            Start your transformation today with our comprehensive driver
-            training programs. Get certified, get hired, and drive your career
-            forward.
+            Take the first step towards your international career with our
+            comprehensive booking process designed to make your journey seamless
+            and successful.
           </motion.p>
 
-          <motion.div
-            className="flex flex-wrap justify-center gap-6 mb-8"
-            variants={itemVariants}
-          >
-            <div className="flex items-center gap-2 text-theme-neutral">
-              <CheckCircle className="text-theme-success" size={20} />
-              <span>Industry-Recognized Certification</span>
-            </div>
-            <div className="flex items-center gap-2 text-theme-neutral">
-              <Calendar className="text-theme-primary" size={20} />
-              <span>Flexible Scheduling</span>
-            </div>
-            <div className="flex items-center gap-2 text-theme-neutral">
-              <Clock className="text-theme-accent" size={20} />
-              <span>Quick Start Available</span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-theme-primary/20 inline-block"
-            variants={itemVariants}
-          >
-            <div className="flex items-center justify-center gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-theme-primary">
-                  500+
-                </div>
-                <div className="text-sm text-theme-neutral">
-                  Students Trained
-                </div>
-              </div>
-              <div className="w-px h-12 bg-theme-primary/20"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-theme-primary">95%</div>
-                <div className="text-sm text-theme-neutral">Success Rate</div>
-              </div>
-              <div className="w-px h-12 bg-theme-primary/20"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-theme-primary">15+</div>
-                <div className="text-sm text-theme-neutral">
-                  Years Experience
-                </div>
-              </div>
-            </div>
+          <motion.div variants={buttonVariants} className="flex justify-center">
+            <Button color="gradient" variant="primary" size="lg">
+              Start Your Journey →
+            </Button>
           </motion.div>
         </motion.div>
       </div>

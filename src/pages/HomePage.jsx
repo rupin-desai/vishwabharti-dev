@@ -24,7 +24,7 @@ const HomePage = () => {
       <div className="container mx-auto px-4 py-8">
         <section className="text-center py-16">
           <h1 className="text-5xl font-bold text-theme-dark mb-6">
-            Welcome to Vishwabharti
+            Welcome to Bharat Vishwa Saarti
           </h1>
           <p className="text-xl text-theme-neutral max-w-2xl mx-auto mb-8">
             Empowering your journey through comprehensive driver apprenticeship

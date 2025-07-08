@@ -452,7 +452,7 @@ const BehavioralSkills = () => {
         "Team collaboration",
       ],
       highlight: "Foundation of Success",
-      color: "purple",
+      color: "orange",
     },
     {
       icon: Heart,
@@ -466,7 +466,7 @@ const BehavioralSkills = () => {
         "Respectful interaction",
       ],
       highlight: "Global Mindset",
-      color: "pink",
+      color: "yellow",
     },
     {
       icon: Target,
@@ -480,18 +480,18 @@ const BehavioralSkills = () => {
         "Mock interviews",
       ],
       highlight: "Career Acceleration",
-      color: "indigo",
+      color: "green",
     },
   ];
 
   return (
     <SectionWrapper
-      className="bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50"
+      className="bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50"
       id="soft-skills"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-6 py-3 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-6 py-3 rounded-full mb-6">
             <Heart className="w-5 h-5" />
             <span className="font-semibold">Personal Development</span>
           </div>
@@ -519,7 +519,7 @@ const BehavioralSkills = () => {
               <div className="lg:w-1/2">
                 <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
                   <div className="flex items-center gap-6 mb-8">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-xl shadow-lg">
+                    <div className="bg-gradient-to-r from-orange-500 to-green-500 p-4 rounded-xl shadow-lg">
                       <skill.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
@@ -551,7 +551,7 @@ const BehavioralSkills = () => {
               </div>
 
               <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-600 rounded-3xl p-10 text-white relative overflow-hidden">
+                <div className="bg-gradient-to-br from-orange-600 via-yellow-600 to-green-600 rounded-3xl p-10 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
 
@@ -562,7 +562,7 @@ const BehavioralSkills = () => {
                     <h4 className="text-2xl font-bold mb-6">
                       Why This Matters
                     </h4>
-                    <p className="text-purple-100 text-lg leading-relaxed">
+                    <p className="text-orange-100 text-lg leading-relaxed">
                       {index === 0 &&
                         "Professional conduct is the foundation of success in international careers. Employers worldwide value reliability, integrity, and professional behavior above all else."}
                       {index === 1 &&
@@ -590,7 +590,7 @@ const BehavioralSkills = () => {
 const GoalSection = () => {
   return (
     <SectionWrapper
-      className="bg-gradient-to-br from-orange-100 via-yellow-50 to-emerald-100"
+      className="bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50"
       id="our-goal"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -608,7 +608,7 @@ const GoalSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 bg-white/60 text-orange-700 px-6 py-2 rounded-full mb-8 text-sm font-semibold shadow-sm"
+            className="inline-flex items-center gap-3 bg-white/60 text-purple-700 px-6 py-2 rounded-full mb-8 text-sm font-semibold shadow-sm"
           >
             <Target className="w-5 h-5" />
             <span>Our Mission</span>
@@ -638,7 +638,7 @@ const GoalSection = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="inline-block bg-white text-orange-600 px-4 py-2 rounded-xl font-semibold shadow-md whitespace-nowrap"
+              className="inline-block bg-white text-purple-600 px-4 py-2 rounded-xl font-semibold shadow-md whitespace-nowrap"
             >
               Global Mobility Professional
             </motion.span>
@@ -674,7 +674,7 @@ const GoalSection = () => {
                 viewport={{ once: true }}
                 className="bg-white/60 backdrop-blur-xl rounded-xl p-6 sm:p-8 shadow-md border border-white/40 hover:shadow-xl transition-all duration-300"
               >
-                <stat.icon className="w-10 h-10 text-orange-500 mx-auto mb-3" />
+                <stat.icon className="w-10 h-10 text-purple-500 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-gray-900 mb-1">
                   {stat.number}
                 </div>

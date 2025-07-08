@@ -29,8 +29,8 @@ const steps = [
     icon: Users,
     duration: "1-2 days",
     category: "assessment",
-    color: "from-blue-500 to-purple-600",
-    bgColor: "bg-gradient-to-br from-blue-50 to-purple-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Comprehensive skill assessment", "Personalized career counseling", "Custom program design", "Strategic goal setting"],
     stats: { success: "98%", candidates: "5000+" },
   },
@@ -43,8 +43,8 @@ const steps = [
     icon: FileText,
     duration: "2 years (Freshers) / 6 months (Experienced)",
     category: "training",
-    color: "from-emerald-500 to-teal-600",
-    bgColor: "bg-gradient-to-br from-emerald-50 to-teal-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Advanced technical bootcamp", "Language proficiency enhancement", "Leadership & soft skills", "Industry-specific certification"],
     stats: { success: "96%", candidates: "12000+" },
   },
@@ -57,8 +57,8 @@ const steps = [
     icon: Target,
     duration: "2-4 weeks",
     category: "placement",
-    color: "from-orange-500 to-red-600",
-    bgColor: "bg-gradient-to-br from-orange-50 to-red-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Rigorous mock interviews", "Strategic company matching", "Expert interview coaching", "Professional offer negotiation"],
     stats: { success: "92%", candidates: "8500+" },
   },
@@ -70,8 +70,8 @@ const steps = [
     icon: FileText,
     duration: "1-2 weeks",
     category: "documentation",
-    color: "from-violet-500 to-indigo-600",
-    bgColor: "bg-gradient-to-br from-violet-50 to-indigo-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Thorough document verification", "Transparent fee processing", "Legal contract signing", "Full compliance assurance"],
     stats: { success: "100%", candidates: "7200+" },
   },
@@ -83,8 +83,8 @@ const steps = [
     icon: Shield,
     duration: "4-8 weeks",
     category: "legal",
-    color: "from-cyan-500 to-blue-600",
-    bgColor: "bg-gradient-to-br from-cyan-50 to-blue-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Expert visa application", "Complete legal documentation", "Thorough background checks", "Real-time approval tracking"],
     stats: { success: "94%", candidates: "6800+" },
   },
@@ -97,8 +97,8 @@ const steps = [
     icon: Heart,
     duration: "1 week",
     category: "medical",
-    color: "from-pink-500 to-rose-600",
-    bgColor: "bg-gradient-to-br from-pink-50 to-rose-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Comprehensive health screening", "Official medical certification", "Final readiness assessment", "Wellness optimization"],
     stats: { success: "99%", candidates: "6500+" },
   },
@@ -111,8 +111,8 @@ const steps = [
     icon: Plane,
     duration: "1-2 days",
     category: "travel",
-    color: "from-amber-500 to-orange-600",
-    bgColor: "bg-gradient-to-br from-amber-50 to-orange-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Premium flight booking", "Comprehensive travel insurance", "Dedicated airport assistance", "Seamless arrival coordination"],
     stats: { success: "100%", candidates: "6200+" },
   },
@@ -125,8 +125,8 @@ const steps = [
     icon: MapPin,
     duration: "Ongoing",
     category: "support",
-    color: "from-green-500 to-emerald-600",
-    bgColor: "bg-gradient-to-br from-green-50 to-emerald-50",
+    color: "from-orange-500 to-green-500",
+    bgColor: "bg-gradient-to-br from-orange-50 to-green-50",
     details: ["Comprehensive settlement support", "24/7 dedicated helpline", "Community integration programs", "Continuous career guidance"],
     stats: { success: "97%", candidates: "5800+" },
   },
@@ -191,25 +191,34 @@ const ProgramJourney = () => {
   }, []);
 
   const scrollToStep = (index) => {
-    sectionRefs.current[index]?.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'center'
+    sectionRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
     });
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-green-50 overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse delay-2000"></div>
+        <div
+          className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-orange-200 to-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style={{ animationDelay: "0s" }}
+        ></div>
+        <div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-orange-200 to-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-orange-200 to-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <div className="relative z-10 flex">
         {/* Sticky Left Panel */}
         <div className="w-1/3 relative">
-          <div className="sticky top-0 h-screen flex flex-col justify-center p-12 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white">
+          <div className="sticky top-0 h-screen flex flex-col justify-center p-12 bg-gradient-to-br from-orange-900 via-green-900 to-green-900 text-white">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
@@ -219,22 +228,22 @@ const ProgramJourney = () => {
               {/* Header */}
               <div>
                 <motion.div
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-full text-sm font-medium mb-6"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-green-500 px-4 py-2 rounded-full text-sm font-medium mb-6"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Sparkles className="w-4 h-4" />
                   Success Journey
                 </motion.div>
-                
+
                 <h1 className="text-6xl font-bold mb-6 leading-tight">
                   <span className="block text-white">OUR</span>
-                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-orange-400 via-green-400 to-green-400 bg-clip-text text-transparent">
                     JOURNEY
                   </span>
                 </h1>
-                
-                <p className="text-xl text-blue-200 leading-relaxed max-w-md">
+
+                <p className="text-xl text-green-200 leading-relaxed max-w-md">
                   The evolution of our mission to transform careers and create international opportunities
                 </p>
               </div>
@@ -250,26 +259,28 @@ const ProgramJourney = () => {
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center`}>
+                    <div
+                      className={`w-10 h-10 rounded-xl bg-gradient-to-r ${steps[activeStep].color} flex items-center justify-center`}
+                    >
                       <span className="text-white font-bold text-sm">{activeStep + 1}</span>
                     </div>
                     <div>
-                      <div className="text-blue-200 text-sm">{steps[activeStep].subtitle}</div>
+                      <div className="text-green-200 text-sm">{steps[activeStep].subtitle}</div>
                       <div className="text-white font-semibold">{steps[activeStep].year}</div>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-white font-bold text-lg mb-2">{steps[activeStep].title}</h3>
-                  <p className="text-blue-200 text-sm leading-relaxed">{steps[activeStep].description}</p>
-                  
+                  <p className="text-green-200 text-sm leading-relaxed">{steps[activeStep].description}</p>
+
                   <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/20">
                     <div className="text-center">
                       <div className="text-white font-bold">{steps[activeStep].stats.success}</div>
-                      <div className="text-blue-200 text-xs">Success Rate</div>
+                      <div className="text-green-200 text-xs">Success Rate</div>
                     </div>
                     <div className="text-center">
                       <div className="text-white font-bold">{steps[activeStep].stats.candidates}</div>
-                      <div className="text-blue-200 text-xs">Candidates</div>
+                      <div className="text-green-200 text-xs">Candidates</div>
                     </div>
                   </div>
                 </motion.div>
@@ -278,15 +289,15 @@ const ProgramJourney = () => {
               {/* Progress */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-blue-200 text-sm">Progress</span>
+                  <span className="text-green-200 text-sm">Progress</span>
                   <span className="text-white font-bold">
                     {Math.round(((activeStep + 1) / steps.length) * 100)}%
                   </span>
                 </div>
-                
+
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <motion.div
-                    className="bg-gradient-to-r from-blue-400 to-purple-400 h-2 rounded-full"
+                    className="bg-gradient-to-r from-orange-400 to-green-400 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -301,11 +312,11 @@ const ProgramJourney = () => {
                     key={index}
                     onClick={() => scrollToStep(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
-                      index === activeStep 
-                        ? 'bg-gradient-to-r from-blue-400 to-purple-400' 
-                        : index < activeStep 
-                          ? 'bg-white/40' 
-                          : 'bg-white/20'
+                      index === activeStep
+                        ? "bg-gradient-to-r from-orange-400 to-green-400"
+                        : index < activeStep
+                        ? "bg-white/40"
+                        : "bg-white/20"
                     }`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -322,7 +333,7 @@ const ProgramJourney = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                  {isPlaying ? 'Pause' : 'Play'}
+                  {isPlaying ? "Pause" : "Play"}
                 </motion.button>
               </div>
             </motion.div>
@@ -335,11 +346,11 @@ const ProgramJourney = () => {
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = activeStep === index;
-              
+
               return (
                 <motion.div
                   key={index}
-                  ref={(el) => sectionRefs.current[index] = el}
+                  ref={(el) => (sectionRefs.current[index] = el)}
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -360,16 +371,20 @@ const ProgramJourney = () => {
                   {/* Main Card */}
                   <motion.div
                     className={`relative overflow-hidden rounded-3xl transition-all duration-700 ${
-                      isActive 
-                        ? `${step.bgColor} shadow-2xl border-2 border-white/50 scale-105` 
-                        : 'bg-white/80 hover:bg-white shadow-lg hover:shadow-xl border border-gray-100'
+                      isActive
+                        ? `${step.bgColor} shadow-2xl border-2 border-white/50 scale-105`
+                        : "bg-white/80 hover:bg-white shadow-lg hover:shadow-xl border border-gray-100"
                     }`}
                     whileHover={{ y: -10 }}
                     layout
                   >
                     {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${step.color} opacity-0 transition-opacity duration-500 ${isActive ? 'opacity-5' : ''}`} />
-                    
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${step.color} opacity-0 transition-opacity duration-500 ${
+                        isActive ? "opacity-5" : ""
+                      }`}
+                    />
+
                     <div className="relative z-10 p-12">
                       {/* Header */}
                       <div className="flex items-start gap-6 mb-8">
@@ -380,11 +395,13 @@ const ProgramJourney = () => {
                         >
                           <Icon className="w-10 h-10 text-white" />
                         </motion.div>
-                        
+
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
                             <span className="text-sm font-medium text-gray-500">Step {index + 1}</span>
-                            <span className={`px-3 py-1 rounded-full bg-gradient-to-r ${step.color} text-white text-xs font-medium`}>
+                            <span
+                              className={`px-3 py-1 rounded-full bg-gradient-to-r ${step.color} text-white text-xs font-medium`}
+                            >
                               {step.category}
                             </span>
                           </div>
@@ -418,7 +435,7 @@ const ProgramJourney = () => {
                             ))}
                           </div>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
                             <Star className="w-5 h-5" />

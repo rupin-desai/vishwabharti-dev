@@ -81,6 +81,7 @@ const LearnSkills = () => {
         "Cultural Adaptability Training",
         "Interview Preparation",
       ],
+      isSpecial: true, // Flag to identify the soft skills card
     },
   ];
 
@@ -111,31 +112,63 @@ const LearnSkills = () => {
       >
         {cards.map((card, i) => {
           const Icon = card.icon;
+          const isSpecialCard = card.isSpecial;
+
           return (
             <motion.div
               key={i}
               variants={cardVariants}
               whileHover={{
                 scale: 1.02,
-                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
+                boxShadow: isSpecialCard
+                  ? "0 8px 24px rgba(251, 146, 60, 0.15)"
+                  : "0 8px 24px rgba(0, 0, 0, 0.08)",
               }}
-              className="bg-white border border-gray-100 p-6 rounded-xl shadow-sm transition-all duration-300"
+              className={`${
+                isSpecialCard
+                  ? "bg-gradient-to-br from-orange-400 via-yellow-400 to-green-500 text-white"
+                  : "bg-white border border-gray-100"
+              } p-6 rounded-xl shadow-sm transition-all duration-300`}
             >
               {/* Icon & Title */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-theme-primary to-theme-success flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-white" />
+                <div
+                  className={`w-12 h-12 rounded-full ${
+                    isSpecialCard
+                      ? "bg-white/20 backdrop-blur-sm"
+                      : "bg-gradient-to-r from-theme-primary to-theme-success"
+                  } flex items-center justify-center`}
+                >
+                  <Icon
+                    className={`w-6 h-6 ${
+                      isSpecialCard ? "text-white" : "text-white"
+                    }`}
+                  />
                 </div>
-                <h3 className="text-lg font-semibold text-theme-dark text-left">
+                <h3
+                  className={`text-lg font-semibold ${
+                    isSpecialCard ? "text-white" : "text-theme-dark"
+                  } text-left`}
+                >
                   {card.title}
                 </h3>
               </div>
 
               {/* Line */}
-              <div className="w-16 h-1 bg-gradient-to-r from-theme-primary to-theme-success mb-4 rounded-full mx-auto" />
+              <div
+                className={`w-16 h-1 ${
+                  isSpecialCard
+                    ? "bg-white/30"
+                    : "bg-gradient-to-r from-theme-primary to-theme-success"
+                } mb-4 rounded-full mx-auto`}
+              />
 
               {/* Skill List */}
-              <ul className="list-disc list-inside text-theme-neutral text-left space-y-1">
+              <ul
+                className={`list-disc list-inside ${
+                  isSpecialCard ? "text-white/90" : "text-theme-neutral"
+                } text-left space-y-1`}
+              >
                 {card.skills.map((skill, idx) => (
                   <li key={idx} className="break-words">
                     {skill}

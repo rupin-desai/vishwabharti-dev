@@ -103,7 +103,7 @@ const HomeAbout = () => {
           style={{ willChange: "transform, opacity" }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
-            About Vishwabharti
+            About Bharat Vishwa Saarti
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success mx-auto mb-4 sm:mb-6"></div>
         </motion.div>
@@ -121,10 +121,10 @@ const HomeAbout = () => {
               style={{ willChange: "transform, opacity" }}
             >
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                Vishwabharti is a leading driver training institute specializing
-                in preparing Indian drivers for global opportunities. Our
-                comprehensive programs combine technical skills with
-                international standards.
+                Bharat Vishwa Saarti is a leading driver training institute
+                specializing in preparing Indian drivers for global
+                opportunities. Our comprehensive programs combine technical
+                skills with international standards.
               </p>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 With over 15 years of experience, we've successfully trained and

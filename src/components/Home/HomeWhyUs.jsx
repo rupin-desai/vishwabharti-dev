@@ -185,7 +185,7 @@ const HomeWhyUs = () => {
             className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800"
             variants={titleElementVariants}
           >
-            Why Choose Vishwabharti
+            Why Choose Bharat Vishwa Saarti
           </motion.h2>
           <motion.div
             className="w-16 sm:w-20 h-1 bg-gradient-to-r from-theme-primary via-theme-accent to-theme-success mx-auto mt-3 sm:mt-4 mb-4 sm:mb-6"
